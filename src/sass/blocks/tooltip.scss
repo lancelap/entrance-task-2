@@ -1,0 +1,101 @@
+.tooltip__body {
+  position: fixed;
+  padding: 16px;
+  width: 328px;
+  margin-left: -180px;
+  z-index: 300;
+  color: #000000;
+  background: #FFFFFF;
+  box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+  border-radius: 8px;
+}
+
+.tooltip__arrow {
+  position: fixed;
+  margin-left: -8px;
+  margin-top: -16px;
+  z-index: 400;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #ffffff; 
+}
+
+.tooltip__headline {
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+  padding-right: 24px;
+  font: bold 20px/24px $font-stack;
+  color: #000000;
+  letter-spacing: 0;
+}
+
+.tooltip__place-and-data-info {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  font: normal 15px/17px $font-stack;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.tooltip__place-text {
+  &::before {
+    content: '· '
+  }
+}
+
+.tooltip__list-members {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.tooltip__member-img {
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.tooltip__members {
+  margin: 0;
+  padding: 0;
+  font: normal 15px/17px $font-stack;
+}
+
+.tooltip__name-member {
+  color: #000000;
+}
+
+.tooltip__other-members {
+  color: #37003E;
+}
+
+@media #{$desktop-width} {
+  .tooltip__body {
+    left: 50%;
+    width: 306px;
+    margin-left: -169px;
+  }
+  .tooltip__headline {
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .tooltip__place-and-data-info {
+    font-size: 13px;
+    color: #000000;
+  }
+  .tooltip__member-img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .tooltip__members {
+    font-size: 13px;
+  }
+}

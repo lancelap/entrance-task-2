@@ -1,0 +1,32 @@
+.list-items {
+  @include reset-list();
+  margin-top: 10px;
+
+  &--no-margin {
+    margin: 0;
+  }
+}
+
+.list-items__item {
+  margin-bottom: 8px;
+}
+
+.list-items__item:last-child {
+  margin-bottom: 0;
+}
+
+@media #{$desktop-width} {
+  .list-items {
+    font-size: 0;
+    line-height: 0;
+    margin-top: 12px;
+  }
+  .list-items__item {
+    display: inline-block;
+    margin-right: 8px;
+  
+    &--peregovorki {
+      margin-right: 0;
+    }
+  }
+}

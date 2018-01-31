@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Главный свайп</title>
+</head>
+
+<body>
+  <div style="display:none">
+    <include src="../build/img/symbols.svg"></include>
+  </div>
+
+  <div class="peregovorki-logo">
+    <div class="peregovorki-container">
+      <a href="/">
+        <svg class="peregovorki-logo__img">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+      <div class="peregovorki__btn-create">
+        <button class="btn btn--primary">Создать встречу</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="timetable">
+    <div class="timetable__calendar">
+      <div class="calendar">
+        <ul class="calendar__selected-day">
+          <li class="calendar__change-day calendar__change-day--previous">
+            <button class="btn-icon btn-icon--circle">
+              <svg class="btn-icon__icon btn-icon__icon--edit">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="calendar__data calendar__data--pressed">
+            <a href="#">
+                14 дек
+                <span class="calendar__today">Сегодня</span>
+            </a>
+          </li>
+          <li class="calendar__change-day calendar__change-day--next">
+            <button class="btn-icon btn-icon--circle">
+              <svg class="btn-icon__icon btn-icon__icon--edit">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="calendar__date-picker">
+        <div class="calendar__change-day calendar__change-day--previous">
+          <button class="btn-icon btn-icon--circle btn-icon--arrow">
+            <svg class="btn-icon__icon btn-icon__icon--edit">
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <h2 class="calendar__picked-mounth">Декабрь</h2>
+        <div class="calendar__change-day calendar__change-day--next">
+          <button class="btn-icon btn-icon--circle btn-icon--arrow">
+            <svg class="btn-icon__icon btn-icon__icon--edit">
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="calendar__weekdays">
+          <li class="calendar__weekday">Пн</li>
+          <li class="calendar__weekday">Вт</li>
+          <li class="calendar__weekday">Ср</li>
+          <li class="calendar__weekday">Чт</li>
+          <li class="calendar__weekday">Пт</li>
+          <li class="calendar__weekday">Сб</li>
+          <li class="calendar__weekday">Вс</li>
+        </ul>
+        <ul class="calendar__days">
+          <li class="calendar__day"></li>
+          <li class="calendar__day"></li>
+          <li class="calendar__day"></li>
+          <li class="calendar__day">
+            <a href="#" data-day="1">1</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="2">2</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="3">3</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="4">4</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="5">5</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="6">6</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="7">7</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="8">8</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="9">9</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="10">10</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="11">11</a>
+          </li>
+          <li class="calendar__day calendar__day--active">
+            <span>12</span>
+            </a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="13">13</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="14">14</a>
+          </li>
+          <li class="calendar__day ">
+            <a href="#" data-day="15">15</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="16">16</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="17">17</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="18">18</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="19">19</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="20">20</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="21">21</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="22">22</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="23">23</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="24">24</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="25">25</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="26">26</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="27">27</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="28">28</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="29">29</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="30">30</a>
+          </li>
+          <li class="calendar__day">
+            <a href="#" data-day="31">31</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timetable__table" id="time-table">
+
+      <div class="timetable__time">
+        <ul class="timetable__list-hours">
+          
+          <li class="timetable__item-hour"><span>8</span></li>
+          
+          <li class="timetable__item-hour"><span>9</span></li>
+          
+          <li class="timetable__item-hour"><span>10</span></li>
+          
+          <li class="timetable__item-hour"><span>11</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>12</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>13</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>14</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>15</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>16</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>17</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>18</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>19</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>20</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>21</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>22</span></li>
+          
+          <li class="timetable__item-hour timetable__item-hour--next"><span>23</span></li>
+        </ul>
+
+        <span class="timetable__timeline timetable__timeline--now" style="left: calc(53px + 1.1px * 60 * 3 + 5px)"></span>
+        <span class="timetable__item-hour timetable__item-hour--now" style="left: calc(53px + 1.1px * 60 * 3 + 5px)">11:05</span>
+
+      </div>
+
+      <ul class="timetable__list-floors">
+        <li class="timetable__list-floors-item">
+          <div class="timetable__floor-container">
+            <div class="timetable__floor-number">7 этаж</div>
+          </div>
+
+          <ul class="timetable__list-rooms">
+            <li class="timetable__list-rooms-item">
+              <div class="room-elem room-elem--disabled">
+                <p class="room-elem__name">Ржавый Фред</p>
+                <p class="room-elem__capacity">3–6 человек</p>
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 1083px;">
+              </div>
+            </li>
+
+            <li class="timetable__list-rooms-item">
+              <div class="room-elem">
+                <p class="room-elem__name">Прачечная</p>
+                <p class="room-elem__capacity">до 10 человек</p>
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 100px;">
+              </div>
+              <div class="timetable__slot-room" style="left: 100px; width: 41px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 141px; width: calc(1280px - 322px);">
+              </div>
+            </li>
+
+            <li class="timetable__list-rooms-item">
+              <div class="room-elem room-elem--hover">
+                <p class="room-elem__name">Жёлтый дом</p>
+                <p class="room-elem__capacity">до 10 человек</p>
+              </div>
+              <div class="timetable__slot-room  timetable__slot-room--no-vacancy" style="left: 0; width: calc(53px + 66px * 3 + 7px);">
+              </div>
+              <div class="timetable__slot-room" style="left: calc(53px + 66px * 3 + 7px); width: 177px;">
+                <a class="timetable__slot-button">
+                  <svg class="btn-icon__icon btn-icon__icon--edit btn-icon__icon--plus">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 435px; width: 79px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 514px; width: 131px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 645px; width: 438px;">
+              </div>
+            </li>
+
+            <li class="timetable__list-rooms-item">
+              <div class="room-elem  room-elem--disabled">
+                <p class="room-elem__name">Оранжевый тюльпан</p>
+                <p class="room-elem__capacity">до 10 человек</p>
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 1083px;">
+              </div>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="timetable__list-floors-item">
+          <div class="timetable__floor-container  ">
+            <div class="timetable__floor-number">6 этаж</div>
+          </div>
+          <ul class="timetable__list-rooms">
+            <li class="timetable__list-rooms-item">
+              <div class="room-elem">
+                <p class="room-elem__name">Джокер</p>
+                <p class="room-elem__capacity">3–6 человек</p>
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 30px;">
+
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 30px; width: 99px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 129px; width: 970px;">
+              </div>
+            </li>
+
+            <li class="timetable__list-rooms-item">
+              <div class="room-elem">
+                <p class="room-elem__name">Мариванна</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 30px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 30px; width: 99px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 129px; width: 970px;">
+              </div>
+
+            </li>
+
+            <li class="timetable__list-rooms-item">
+              <div class="timetable__slot-room" style="left: 0; width: 60px;">
+              </div>
+              <div class="timetable__slot-room" style="left: 60px; width: 211px;">
+              </div>
+              <div class="timetable__slot-room" style="left: 271px; width: 300px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 571px; width: 218px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 789px; width: 310px;">
+              </div>
+
+              <div class="room-elem">
+                <p class="room-elem__name">Тонкий Боб</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+
+            </li>
+
+            <li class="timetable__list-rooms-item">
+              <div class="room-elem room-elem">
+                <p class="room-elem__name">Чёрная вдова</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 30px;">
+              </div>
+              <div class="timetable__slot-room" style="left: 30px; width: 46px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 76px; width: calc(1280px - 257px);">
+              </div>
+            </li>
+
+            <li class="timetable__list-rooms-item">
+              <div class="room-elem room-elem">
+                <p class="room-elem__name">Белорусский ликёр</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 100px;">
+              </div>
+              <div class="timetable__slot-room" style="left: 100px; width: 41px;">
+              </div>
+              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 141px; width: calc(1280px - 322px);">
+              </div>
+            </li>
+
+          </ul>
+        </li>
+        <div class="timetable__list-white-padding"></div>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

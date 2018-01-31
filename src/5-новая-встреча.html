@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Новая встреча</title>
+</head>
+
+<body>
+  <div style="display:none">
+    <include src="../build/img/symbols.svg"></include>
+  </div>
+
+  <div class="peregovorki-logo">
+    <div class="peregovorki-container">
+      <a href="/">
+        <svg class="peregovorki-logo__img">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <form class="form-meeting" action="#">
+    <div class="form-meeting__button-close-form">
+      <a class="btn-icon btn-icon--edit">
+        <svg class="btn-icon__icon btn-icon__icon--edit">
+          <use xlink:href="#close"></use>
+        </svg>
+      </a>
+    </div>
+    <h1 class="form-meeting__headline">
+      Новая встреча
+    </h1>
+    <fieldset class="form-meeting__fieldset form-meeting__fieldset--theme-input">
+      <div class="input-field">
+        <label class="input-field__label" for="time-end">Тема</label>
+        <div class="input-field__input-with-icon input-field__input-with-icon--pressed">
+          <input class="input-field__input" placeholder="О чем будем говорить?" type="text" name="theme" id="theme">
+          <a class="btn-icon btn-icon--grey">
+            <svg class="btn-icon__icon btn-icon__icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </fieldset>
+
+    <fieldset class="form-meeting__fieldset form-meeting__fieldset--date-and-time">
+      <div class="input-field input-field--date">
+        <label class="input-field__label" for="date-text">
+          Дата
+          <span class="input-field__text-time">и время</span>
+        </label>
+        <div class="input-field__input-with-icon input-field__input-with-icon--visible-icon">
+          <input class="input-field__input" placeholder="14 декабря, 2017" type="text" name="date-text" id="date-text">
+          <button class="btn-icon btn-icon--grey">
+            <svg class="btn-icon__icon btn-icon__icon">
+              <use xlink:href="#calendar"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="input-field input-field--time">
+        <label class="input-field__label  input-field__label--time" for="time-start">Начало</label>
+        <input class="input-field__input input-field__input--short" placeholder="16:00" type="text" name="time-start" id="time-start">
+      </div>
+      <span class="input-field__hyphen"></span>
+      <div class="input-field input-field--time">
+        <label class="input-field__label input-field__label--time" for="time-end">Конец</label>
+        <input class="input-field__input input-field__input--short" placeholder="16:30" type="text" name="time-end" id="time-end">
+      </div>
+    </fieldset>
+
+    <div class="form-meeting__offset"></div>
+
+    <fieldset class="form-meeting__fieldset">
+      <div class="input-field">
+        <label class="input-field__label" for="member">
+          Участники
+        </label>
+        <div class="input-field__input-with-icon">
+          <input class="input-field__input" placeholder="Например, Тор Одинович" type="text" name="member" id="member">
+          <a class="btn-icon btn-icon--grey">
+            <svg class="btn-icon__icon btn-icon__icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <ul class="list-items">
+        <li class="list-items__item">
+          <div class="user-label">
+            <p class="user-label__name">Лекс Лютор</p>
+            <button class="btn-icon btn-icon--user">
+              <svg class="btn-icon__icon btn-icon__icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+            <img class="user-label__avatar" src="/img/Chewbacca-icon.png" alt="Лекс Лютор">
+          </div>
+        </li>
+        <li class="list-items__item">
+          <div class="user-label">
+            <p class="user-label__name">Кларк Кент</p>
+            <button class="btn-icon btn-icon--user">
+              <svg class="btn-icon__icon btn-icon__icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+            <img class="user-label__avatar" src="/img/Luke-Skywalker-icon.png" alt="Кларк Кент">
+          </div>
+        </li>
+        <li class="list-items__item">
+          <div class="user-label">
+            <p class="user-label__name">Томас Андерсон</p>
+            <button class="btn-icon btn-icon--user">
+              <svg class="btn-icon__icon btn-icon__icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+            <img class="user-label__avatar" src="/img/Luke-Skywalker-icon.png" alt="Томас Андерсон">
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <div class="form-meeting__offset"></div>
+
+    <fieldset class="form-meeting__fieldset form-meeting__fieldset--recommended">
+      <legend class="form-meeting__legend">Рекомендованные переговорки</legend>
+
+      <ul class="list-items list-items--no-margin">
+        <li class="list-items__item list-items__item--peregovorki">
+          <div class="peregovorka">
+            <span class="peregovorka__time">16:00—16:30</span>
+            <div class="peregovorka__place">
+              <span class="peregovorka__name">Готем</span>
+              <span class="peregovorka__floor">4 этаж</span>
+            </div>
+          </div>
+        </li>
+        <li class="list-items__item list-items__item--peregovorki">
+          <div class="peregovorka">
+            <span class="peregovorka__time">16:00—16:30</span>
+            <div class="peregovorka__place">
+              <span class="peregovorka__name">Поле непаханное</span>
+              <span class="peregovorka__floor">4 этаж</span>
+            </div>
+          </div>
+        </li>
+        <li class="list-items__item list-items__item--peregovorki">
+          <div class="peregovorka">
+            <span class="peregovorka__time">16:00—16:30</span>
+            <div class="peregovorka__place">
+              <span class="peregovorka__name">Темная башная</span>
+              <span class="peregovorka__floor">4 этаж</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+
+    <p class="form-meeting__fixed-phrase">Выберите переговорку</p>
+    <div class="form-meeting__create-meeting-container">
+      <button class="btn btn--cancel-create">Отмена</button>
+      <button class="btn btn--primary btn--form-meeting">Создать встречу</button>
+    </div>
+  </form>
+
+</body>
+
+</html>

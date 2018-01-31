@@ -1,0 +1,65 @@
+.peregovorka {
+  position: relative;
+  width: 293px;
+  padding-top: 14px;
+  padding-right: 23px;
+  padding-bottom: 14px;
+  padding-left: 12px;
+  color: #000000;
+  font-size: 0;
+  line-height: 0;
+  background-color: #E9ECEF;
+  border-radius: 4px;
+
+  &--selected {
+    background-color: #007DFF;
+    color: #ffffff;
+  }
+}
+
+.peregovorka__time {
+  margin-right: 12px;
+  font: bold 15px/17px $font-stack;
+  letter-spacing: 0;
+}
+
+.peregovorka__place {
+  display: inline-block;
+}
+
+.peregovorka__name {
+  font: normal 15px/17px $font-stack;
+  letter-spacing: 0;
+
+  &::after {
+    content: ' · ';
+  }
+}
+
+.peregovorka__floor {
+  font: 15px/17px $font-stack;
+}
+
+.peregovorka > .btn-icon {
+  display: none;
+}
+
+.peregovorka--selected > .btn-icon {
+  display: block;
+}
+
+@media #{$desktop-width} {
+  .peregovorka {
+    width: 387px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  .peregovorka,
+  .peregovorka__time,
+  .peregovorka__name,
+  .peregovorka__place {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}

@@ -1,0 +1,162 @@
+.form-meeting {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.form-meeting__button-close-form {
+  display: none;
+}
+
+.form-meeting__headline {
+  width: 344px;
+  margin: 0;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  font-family: $font-stack;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.form-meeting__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &--recommended {
+    margin-bottom: 139px;
+  }
+
+  &--theme-input {
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  &--date-and-time {
+    margin-top: 0;
+  }
+}
+
+.form-meeting__legend {
+  display: block; 
+  margin-bottom: 4px;
+  font: bold 13px/16px $font-stack;
+  color: #000000;
+  letter-spacing: 0;
+}
+
+.form-meeting__offset {
+  height: 8px;
+  width: 100%;
+  background: #E9ECEF;
+}
+
+.form-meeting__two-btn {
+  padding-top: 16px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+}
+
+.form-meeting__create-meeting-container {
+  position: fixed;
+  width: 100%; 
+  bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  text-align: center; 
+  background-color: #ffffff;
+}
+
+.form-meeting__fixed-phrase {
+  position: fixed;
+  width: 100%; 
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  padding-left: 16px;
+  bottom: 80px;
+  font: bold 15px/18px $font-stack;
+  color: #ffffff;
+  background: rgba(0,16,33,0.80);
+  opacity: 0.93;
+}
+
+.form-meeting__btn-container {
+  width: 100%;
+}
+
+@media #{$desktop-width} {
+  .form-meeting {
+    display: flex;
+    padding-bottom: 76px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 31px;
+  }
+  .form-meeting__headline {
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+  .form-meeting {
+    width: 872px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .form-meeting__fieldset {
+    flex-basis: 420px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+  .form-meeting__headline {
+    flex-basis: 100%;
+  }
+  .form-meeting__offset {
+    display: none;  
+  }
+  .form-meeting__btn-container {
+    display: flex;
+  }
+  .form-meeting__btn-container,
+  .form-meeting__create-meeting-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 -1px 0 0 #E9ECEF;
+  }
+  .form-meeting__legend {
+    width: 420px;
+  }  
+  .form-meeting__fixed-phrase {
+    display: none;
+  }
+  .form-meeting__button-close-form {
+    position: absolute;
+    display: block;
+    top: 16px;
+    right: -16px;
+  }  
+}

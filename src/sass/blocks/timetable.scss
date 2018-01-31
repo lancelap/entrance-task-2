@@ -1,0 +1,318 @@
+.timetable{
+  position: relative;
+}
+
+.timetable__table {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  min-width: 360px;
+  overflow: scroll;
+  background-color: #F7F8F9;
+  border-top: 1px solid #E9ECEF;
+}
+
+.timetable__time {
+  background-color: #ffffff;
+  width: 1280px;
+  border-bottom: 1px solid #E9ECEF;
+}
+
+
+.timetable__list-hours {
+  background-color: #ffffff;
+  @include reset-list();
+  display: flex;
+  padding-left: 210px;
+}
+
+.timetable__item-hour {
+  margin: 0;
+  margin-right: 17px;
+  padding: 0;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  font: bold 11px/13px $font-stack;
+  color: #858E98;
+  background-color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.4px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    width: 1px;
+    top: 32px;
+    margin-left: 23px;
+    height: calc(100% - 32px);
+    background-color: #E9ECEF;
+  }
+
+  &--now {
+    position: absolute;
+    display: inline-block;
+    width: 49px;
+    top: 0;
+    left: 0px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 156.5px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    background-color: #007DFF;
+    color: #ffffff;
+    border-radius: 100px;
+  }
+
+  &--next {
+    color: #262626;
+  }
+}
+
+.timetable__item-hour span {
+  display: inline-block;
+  width: 49px;
+}
+
+.timetable__timeline {
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    width: 1px;
+    top: 32px;
+    margin-left: 23.5px;
+    height: calc(100% - 32px);
+    background-color: #E9ECEF;
+  }
+
+  &--now {
+    content: '';
+    position: absolute;
+    z-index: 200;
+    width: 1px;
+    top: 26px;
+    left: 0px;
+    margin-left: 181px;
+    height: calc(100% - 26px);
+    background-color: #007DFF;
+  }
+}
+
+.timetable__timeline--now::before{
+  display: none;
+}
+
+.timetable__slot-room {
+  position: absolute;
+  margin-left: 181px;
+  z-index: 100;
+  height: 58px;
+  color: #000000;
+  background-color: #ffffff;
+
+  &:active {
+    background-color: #ffffff;
+  }
+  &--no-vacancy {
+    background-color: #D5DFE9;
+  }
+  &--no-vacancy:active {
+    background-color: #98A9B9;
+  }
+}
+
+.timetable__slot-room.timetable__slot-room--no-vacancy.timetable__slot-room--active {
+  background-color: #98A9B9;
+  z-index: 300;
+}
+
+.timetable__slot-room.timetable__slot-room--active {
+  background-color: #005CFF;
+  z-index: 300;
+}
+
+.timetable__floor-container {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+
+.timetable__floor-number {
+  display: inline-block;
+  position: sticky;
+  left: 16px;
+  font: bold 11px/13px $font-stack;
+  color: #858E98;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.timetable__list-floors {
+  @include reset-list();
+  width: 1280px;
+  background-color: transparent;
+}
+
+.timetable__list-rooms {
+  @include reset-list();
+}
+
+.timetable__list-rooms-item {
+  @include reset-list();
+  display: flex;
+  height: 58px;
+  font-size: 0;
+  line-height: 0;
+  margin-bottom: 2px;
+}
+
+.timetable__btn-create {
+  display: none;
+}
+
+.timetable__slot-button {
+  display: none;
+}
+
+@media #{$desktop-width} {
+  .timetable{
+    margin: 0 auto;
+    width: 1278px;
+    border-right: 1px solid #E9ECEF;
+    border-bottom: 1px solid #E9ECEF;
+    border-left: 1px solid #E9ECEF;
+  }
+  .timetable__table {
+    overflow: hidden;
+    border-top: none;
+  }
+  .timetable__calendar {
+    position: absolute;
+    top: 0;
+    left: 18px;
+  }
+  .timetable__item-hour {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    &::before {
+      top: 46px;
+    }
+
+    &--now{
+      margin-top: 14px;
+      margin-left: 198.5px;
+    }
+  }
+  .timetable__list-hours {
+    box-sizing: border-box;
+    padding-left: 252px;
+  }
+  .timetable__list-rooms-item {
+    margin: 0;
+    height: 52px;
+  }
+  .timetable__timeline {
+    &::before {
+      top: 46px;
+      height: calc(100% - 46px);
+    }
+    &--now {
+      top: 34px;
+      margin-left: 223px;
+      height: calc(100% - 34px);
+    }
+  }
+  .timetable__floor-container {
+    padding: 0;
+  }
+  .timetable__floor-number {
+    position: static;
+    display: block;
+    left: 0;
+    margin-top: -12px;
+    width: 220px;
+    padding-top: 21px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 25px;
+    background-color: #ffffff;
+  }
+  .timetable__floor-number:first-of-type {
+    margin-top: 0px;
+  }
+  .timetable__list-floors {
+    width: auto;
+  }
+  .timetable__list-white-padding {
+    padding-bottom: 65px;
+    width: 245px;
+    background: #ffffff;
+  }
+  .timetable__slot-room {
+    height: 28px;
+    margin-top: 12px;
+    margin-left: 223px;
+
+    &:hover {
+      z-index: 200;
+    }
+    &--no-vacancy:hover {
+      background-color: #98A9B9;
+      background-color: rgba(0,0,0,0.12);
+    }
+    &--no-vacancy:active {
+      background-color: #98A9B9;
+    }
+  }
+  .timetable__slot-room.timetable__slot-room--active {
+    background-color: #ffffff;
+  }
+  .timetable__time {
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 500;
+      width: 1px;
+      top: 46px;
+      margin-left: 244px;
+      height: calc(100% - 46px);
+      background-color: #E9ECEF;
+    }
+  }
+  .timetable__btn-create {
+    display: block;
+    position: absolute;
+    top: -55px;
+    right: 24px;
+  }
+  .timetable__timeline {
+    // z-index: 400px;
+  }
+  .timetable__slot-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 28px;
+    margin-left: -28px;
+    background-color: #2B50FD;
+    border-radius: 2px;
+
+    &:active {
+      background-color: #1D00FE;
+    }
+  }
+}

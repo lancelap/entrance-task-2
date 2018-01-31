@@ -1,0 +1,148 @@
+.btn {
+  display: inline-block;
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 14px;
+  padding-left: 24px;
+  font: medium 13px/16px $font-stack;
+  text-decoration: none;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  color: #000000;
+  background-color: #E9ECEF;
+  border-style: none;
+  border-radius: 4px;
+
+  &:active {
+    background-color: #DDE0E4;
+  }
+
+  &:disabled {
+    background-color: #E9ECEF;
+    color: #000000; /* Fallback for older browsers */
+    color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  &--primary {
+    color: #ffffff;
+    background-color: #007DFF;
+  
+    &:active {
+      background-color: #0059FF;
+    }
+  }
+  
+  &--primary-big {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  &--few-btn {
+    margin-left: 16px;
+  }
+
+  &--cancel,
+  &--save, {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  &--cancel {
+    margin-left: 97px;
+  }
+  
+  &--save {
+    margin-left: 16px;
+  }
+
+  &--form-meeting {
+    width: 238px;
+
+    &:disabled {
+      background-color: #E5E5E5;
+    }
+  }
+  &--cancel-create {
+    display: none;
+  }
+}
+
+.btn--few-btn:first-child {
+  margin-left: 0;
+}
+
+@media #{$mobile-width-only} {
+  .btn {
+    &--delete {
+      padding-top: 16px;
+      padding-bottom: 20px;
+      display: inline-block;
+      width: 100%;
+      font: medium 15px/18px  $font-stack;
+      text-align: center;
+      color: #FF3333;
+      background-color: #ffffff;
+      border-radius: 0;
+    }  
+  }
+}
+
+@media #{$desktop-width} {
+  .btn {
+    font: medium 13px/16px $font-stack;
+    padding-top: 10px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    &:hover {
+      background-color: #E9ECEF;
+      background-color: rgba(0,16,33,0.05);
+    }
+    &:active {
+      background-color: #E9ECEF;
+      background-color: rgba(4,29,56,0.14);
+    }
+    &--delete {
+      width: auto;
+      order: 2;
+    }
+    &--cancel {
+      margin: 0;
+      order: 1;
+      margin-right: 16px;
+    }
+    &--save {
+      order: 3;
+      margin: 0;
+      margin-left: 16px;
+      color: #000000;
+      background-color: #E9ECEF;
+    
+      &:active {
+        background-color: #DDE0E4;
+      }
+
+      &:disabled {
+        background-color: #E9ECEF;
+      }
+    }
+    &--form-meeting {
+      margin-left: 16px;
+      width: auto;
+    }
+    &--primary:hover  {
+      background-color: #0059FF;
+    }
+    &--primary:active  {
+      background-color: #0B00FF;
+      background-color: rgba(11,0,255,0.80);
+    }
+    &--cancel-create {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.room-elem {
+  z-index: 100;
+  padding: 12px 25px 12px 15px;
+  width: 140px;
+  font: medium 15px/17px $font-stack;
+  color: #000000;
+  background-color: #ffffff;
+
+  &--disabled {
+    color: #C7C7C7;
+  }
+
+  &--compact {
+    position: sticky;
+    z-index: 200;
+    left: 16px;
+    width: auto;
+    height: 13px;
+    padding: 5px 8px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.4px;
+    box-shadow: 0 1px 8px 0 #002c5c;
+    box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+    border-radius: 4px;
+  }
+}
+
+.room-elem__name {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.room-elem__capacity {
+  margin: 0;
+  padding: 0;
+}
+
+.room-elem--compact .room-elem__capacity {
+  display: none;
+}
+
+@media #{$desktop-width} {
+  .room-elem {
+    padding-top: 0;
+    padding-right: 50px;
+    padding-left: 25px;
+    width: 170px;
+    z-index: 400;
+
+    &--disabled {
+      color: #858E98;
+    }
+    &--hover {
+      color: #0070E0;
+    }
+    &--pressed {
+      color: #1D54FE;
+    }
+  }
+  .room-elem__capacity {
+    font-size: 13px;
+    padding-top: 2px;
+  }
+  .room-elem__name {
+    padding-top: 8px;
+  }
+  .room-elem--hover .room-elem__capacity,
+  .room-elem--pressed .room-elem__capacity  {
+    color: #000000; 
+  }
+}
