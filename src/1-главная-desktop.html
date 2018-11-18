@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Главный свайп</title>
@@ -15,8 +15,8 @@
     <include src="../build/img/symbols.svg"></include>
   </div>
 
-  <div class="peregovorki-logo">
-      <div class="peregovorki-container">
+  <!-- <div class="peregovorki-logo">
+      <div class="container">
         <a href="/">
           <svg class="peregovorki-logo__img">
             <use xlink:href="#logo"></use>
@@ -26,9 +26,20 @@
           <button class="btn btn--primary">Создать встречу</button>
         </div>
       </div>
+    </div> -->
+
+    <div class="b-timetable">
+    <div style="height: 1002px;">
+      <div class="b-timetable__header">
+        <div style="height: 30px;">Header</div>
+      </div>
+        <div style="background: #000; height: 1000px; position: relative;"></div>
+      </div>
     </div>
 
-  <div class="timetable">
+    
+
+  <!-- <div class="timetable">
     <div class="timetable__calendar">
       <div class="calendar">
         <ul class="calendar__selected-day">
@@ -56,217 +67,328 @@
     </div>
 
     <div class="timetable__table" id="time-table">
-
-      <div class="timetable__time">
-        <ul class="timetable__list-hours">
-          
-          <li class="timetable__item-hour"><span>8</span></li>
-          
-          <li class="timetable__item-hour"><span>9</span></li>
-          
-          <li class="timetable__item-hour"><span>10</span></li>
-          
-          <li class="timetable__item-hour"><span>11</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>12</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>13</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>14</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>15</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>16</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>17</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>18</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>19</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>20</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>21</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>22</span></li>
-          
-          <li class="timetable__item-hour timetable__item-hour--next"><span>23</span></li>
-        </ul>
-
-        <span class="timetable__timeline timetable__timeline--now" style="left: calc(53px + 1.1px * 60 * 3 + 5px)"></span>
-        <span class="timetable__item-hour timetable__item-hour--now" style="left: calc(53px + 1.1px * 60 * 3 + 5px)">11:05</span>
-
+      <div class="clock timetable__clock">
+          <ul class="clock__list-hours timetable__clock-list-hours">
+            <li class="clock__item-hour">8</li>
+            
+            <li class="clock__item-hour">9</li>
+            
+            <li class="clock__item-hour">10</li>
+            
+            <li class="clock__item-hour">11</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">12</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">13</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">14</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">15</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">16</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">17</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">18</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">19</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">20</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">21</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">22</li>
+            
+            <li class="clock__item-hour clock__item-hour--next">23</li>
+          </ul>
+  
+          <span class="clock__timeline clock__timeline--now" style="left: calc(23px + 1.1px * 60 * 3 + 0px)"></span>
+          <span class="clock__item-hour clock__item-hour--now" style="left: calc(23px + 1.1px * 60 * 3 + 0px)">11:05</span>
       </div>
 
-      <ul class="timetable__list-floors">
-        <li class="timetable__list-floors-item">
-          <div class="timetable__floor-container">
-            <div class="timetable__floor-number">7 этаж</div>
-          </div>
-
-          <ul class="timetable__list-rooms">
-            <li class="timetable__list-rooms-item">
+      <div class="timetable__content">
+        <ul class="list-floors timetable__list-floors">
+            <li class="list-floors__floor-number">7 этаж</li>
+  
+            <li class="list-floors__item">
               <div class="room-elem room-elem--disabled">
                 <p class="room-elem__name">Ржавый Фред</p>
-                <p class="room-elem__capacity">3–6 человек</p>
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 1083px;">
+                <p class="room-elem__capacity">3—6 человек</p>
               </div>
             </li>
-
-            <li class="timetable__list-rooms-item">
+  
+            <li class="list-floors__item">
               <div class="room-elem">
                 <p class="room-elem__name">Прачечная</p>
                 <p class="room-elem__capacity">до 10 человек</p>
               </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 100px;">
-              </div>
-              <div class="timetable__slot-room" style="left: 100px; width: 41px;">
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 141px; width: calc(1280px - 322px);">
-              </div>
             </li>
-
-            <li class="timetable__list-rooms-item">
+  
+            <li class="list-floors__item">
               <div class="room-elem room-elem--hover">
                 <p class="room-elem__name">Жёлтый дом</p>
                 <p class="room-elem__capacity">до 10 человек</p>
               </div>
-              <div class="timetable__slot-room  timetable__slot-room--no-vacancy" style="left: 0; width: calc(53px + 66px * 3 + 7px);">
-              </div>
-              <div class="timetable__slot-room" style="left: calc(53px + 66px * 3 + 7px); width: 177px;">
-                <a class="timetable__slot-button">
-                  <svg class="btn-icon__icon btn-icon__icon--edit btn-icon__icon--plus">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
-                  </svg>
-                </a>
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 435px; width: 79px;">
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy timetable__slot-room--active" style="left: 514px; width: 131px;">
-                <div class="tooltip">
-                  <div class="tooltip__arrow"></div>
-                  <div class="tooltip__body">
-                    <button class="btn-icon btn-icon--edit">
-                      <svg class="btn-icon__icon btn-icon__icon--edit">
-                        <use xlink:href="#edit"></use>
-                      </svg>
-                    </button>
-                    <h2 class="tooltip__headline">Рассуждения о высоком</h2>
-                    <p class="tooltip__place-and-data-info">
-                      14 декабря, 15:00—17:00
-                      <span class="tooltip__place-text">Ржавый Фред</span>
-                    </p>
-                    <div class="tooltip__list-members">
-                      <img class="tooltip__member-img" src="img/Darth-Vader-icon.png">
-                      <p class="tooltip__members">
-                        <span class="tooltip__name-member">Дарт Вейдер</span>
-                        <span class="tooltip__other-members"></span> и 12 участников
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 645px; width: 438px;">
-              </div>
             </li>
-
-            <li class="timetable__list-rooms-item">
+  
+            <li class="list-floors__item">
               <div class="room-elem  room-elem--disabled">
                 <p class="room-elem__name">Оранжевый тюльпан</p>
                 <p class="room-elem__capacity">до 10 человек</p>
               </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 1083px;">
-              </div>
             </li>
-
-          </ul>
-        </li>
-
-        <li class="timetable__list-floors-item">
-          <div class="timetable__floor-container  ">
-            <div class="timetable__floor-number">6 этаж</div>
-          </div>
-          <ul class="timetable__list-rooms">
-            <li class="timetable__list-rooms-item">
+  
+            <li class="list-floors__floor-number">6 этаж</li>
+  
+            <li class="list-floors__item">
               <div class="room-elem">
                 <p class="room-elem__name">Джокер</p>
-                <p class="room-elem__capacity">3–6 человек</p>
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 30px;">
-
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 30px; width: 99px;">
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 129px; width: 970px;">
+                <p class="room-elem__capacity">3—6 человек</p>
               </div>
             </li>
-
-            <li class="timetable__list-rooms-item">
+  
+            <li class="list-floors__item">
               <div class="room-elem">
                 <p class="room-elem__name">Мариванна</p>
                 <p class="room-elem__capacity">3—6 человек</p>
               </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 30px;">
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 30px; width: 99px;">
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 129px; width: 970px;">
-              </div>
-
             </li>
-
-            <li class="timetable__list-rooms-item">
-              <div class="timetable__slot-room" style="left: 0; width: 60px;">
-              </div>
-              <div class="timetable__slot-room" style="left: 60px; width: 211px;">
-              </div>
-              <div class="timetable__slot-room" style="left: 271px; width: 300px;">
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 571px; width: 218px;">
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 789px; width: 310px;">
-              </div>
-
+  
+            <li class="list-floors__item">
               <div class="room-elem">
                 <p class="room-elem__name">Тонкий Боб</p>
                 <p class="room-elem__capacity">3—6 человек</p>
               </div>
-
             </li>
-
-            <li class="timetable__list-rooms-item">
+  
+            <li class="list-floors__item">
               <div class="room-elem room-elem">
                 <p class="room-elem__name">Чёрная вдова</p>
                 <p class="room-elem__capacity">3—6 человек</p>
               </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 30px;">
-              </div>
-              <div class="timetable__slot-room" style="left: 30px; width: 46px;">
-              </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 76px; width: calc(1280px - 257px);">
-              </div>
             </li>
-
-            <li class="timetable__list-rooms-item">
+  
+            <li class="list-floors__item">
               <div class="room-elem room-elem">
                 <p class="room-elem__name">Белорусский ликёр</p>
                 <p class="room-elem__capacity">3—6 человек</p>
               </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 0; width: 100px;">
+            </li>
+
+            <li class="list-floors__floor-number">6 этаж</li>
+  
+            <li class="list-floors__item">
+              <div class="room-elem">
+                <p class="room-elem__name">Джокер</p>
+                <p class="room-elem__capacity">3–6 человек</p>
               </div>
-              <div class="timetable__slot-room" style="left: 100px; width: 41px;">
+            </li>
+  
+            <li class="list-floors__item">
+              <div class="room-elem">
+                <p class="room-elem__name">Мариванна</p>
+                <p class="room-elem__capacity">3—6 человек</p>
               </div>
-              <div class="timetable__slot-room timetable__slot-room--no-vacancy" style="left: 141px; width: calc(1280px - 322px);">
+            </li>
+  
+            <li class="list-floors__item">
+              <div class="room-elem">
+                <p class="room-elem__name">Тонкий Боб</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+  
+            <li class="list-floors__item">
+              <div class="room-elem room-elem">
+                <p class="room-elem__name">Чёрная вдова</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+  
+            <li class="list-floors__item">
+              <div class="room-elem room-elem">
+                <p class="room-elem__name">Белорусский ликёр</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+            
+        </ul>
+
+        <div style="width: 100%">
+          <ul class="timetable__list-timeline">
+              <li class="timetable__item-timeline">
+                  <div class="room-slot room-slot--no-vacancy" style="flex-grow: 31; flex-basis: 0%">
+                  </div>
+                  <div class="room-slot" style="flex-grow: 110; flex-basis: 0%">
+                  </div>
+                  <div class="room-slot room-slot--no-vacancy" style="flex-grow: 894; flex-basis: 0%">
+                  </div>
+                </li>
+
+            <li class="timetable__item-timeline">
+              <div class="room-slot room-slot--no-vacancy" style="flex-grow: 8.9">
+              </div>
+              <div class="room-slot" style="flex-grow: 5.2">
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-grow: 89.4">
               </div>
             </li>
 
+            <li class="timetable__item-timeline">
+              <div class="room-slot  room-slot--no-vacancy" style="flex-basis: calc(53px + 66px * 3 + 7px);">
+                </div>
+                <div class="room-slot" style="flex-basis: 177px;">
+                  <a class="timetable__slot-button">
+                    <svg class="btn-icon__icon btn-icon__icon--edit btn-icon__icon--plus">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 79px;">
+                </div>
+                <div class="room-slot room-slot--no-vacancy room-slot--active" style="flex-basis: 131px;">
+                  <div class="tooltip">
+                    <div class="tooltip__arrow"></div>
+                    <div class="tooltip__body">
+                      <button class="btn-icon btn-icon--edit">
+                        <svg class="btn-icon__icon btn-icon__icon--edit">
+                          <use xlink:href="#edit"></use>
+                        </svg>
+                      </button>
+                      <h2 class="tooltip__headline">Рассуждения о высоком</h2>
+                      <p class="tooltip__place-and-data-info">
+                        14 декабря, 15:00—17:00
+                        <span class="tooltip__place-text">Ржавый Фред</span>
+                      </p>
+                      <div class="tooltip__list-members">
+                        <img class="tooltip__member-img" src="img/Darth-Vader-icon.png">
+                        <p class="tooltip__members">
+                          <span class="tooltip__name-member">Дарт Вейдер</span>
+                          <span class="tooltip__other-members"></span> и 12 участников
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style=" flex-basis: 390px">
+              </div>
+            </li>
+
+            <li class="timetable__item-timeline">
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 1035px;">
+              </div>
+            </li>
           </ul>
-        </li>
-        <div class="timetable__list-white-padding"></div>
-      </ul>
+
+          <ul class="timetable__list-timeline">
+            <li class="timetable__item-timeline">
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 30px;">
+
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 99px;">
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 906px;">
+              </div>
+            </li>
+
+            <li class="timetable__item-timeline">
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 30px;">
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 99px;">
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 906px;">
+              </div>
+
+            </li>
+
+            <li class="timetable__item-timeline">
+              <div class="room-slot" style="flex-basis: 60px;">
+              </div>
+              <div class="room-slot" style="flex-basis: 211px;">
+              </div>
+              <div class="room-slot" style="flex-basis: 300px;">
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 218px;">
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 246px;">
+              </div>
+            </li>
+
+            <li class="timetable__item-timeline">
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 30px;">
+              </div>
+              <div class="room-slot" style="flex-basis: 46px;">
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 959px;">
+              </div>
+            </li>
+
+            <li class="timetable__item-timeline">
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 100px;">
+              </div>
+              <div class="room-slot" style="flex-basis: 41px;">
+              </div>
+              <div class="room-slot room-slot--no-vacancy" style="flex-basis: 894px;">
+              </div>
+            </li>
+          </ul>
+
+          <ul class="timetable__list-timeline">
+              <li class="timetable__item-timeline">
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 30px;">
+  
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 99px;">
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 896px;">
+                </div>
+              </li>
+  
+              <li class="timetable__item-timeline">
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 30px;">
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 99px;">
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 896px;">
+                </div>
+  
+              </li>
+  
+              <li class="timetable__item-timeline">
+                <div class="room-slot" style="flex-basis: 60px;">
+                </div>
+                <div class="room-slot" style="flex-basis: 211px;">
+                </div>
+                <div class="room-slot" style="flex-basis: 300px;">
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 218px;">
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 246px;">
+                </div>
+              </li>
+  
+              <li class="timetable__item-timeline">
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 30px;">
+                </div>
+                <div class="room-slot" style="flex-basis: 46px;">
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 959px;">
+                </div>
+              </li>
+  
+              <li class="timetable__item-timeline">
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 100px;">
+                </div>
+                <div class="room-slot" style="flex-basis: 41px;">
+                </div>
+                <div class="room-slot room-slot--no-vacancy" style="flex-basis: 894px;">
+                </div>
+              </li>
+            </ul>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> -->
 </body>
 
 </html>
