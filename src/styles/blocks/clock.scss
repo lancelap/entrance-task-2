@@ -1,0 +1,154 @@
+.clock {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.clock__list-hours {
+  display: flex;
+  font: bold 11px/13px $font-stack;
+  color: #858e98;
+  background-color: #ffffff;
+}
+
+.clock__item-hour {
+  position: relative;
+  flex-grow: 66;
+  flex-basis: 0%;
+  padding: 0;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+
+  font: bold 11px/13px $font-stack;
+  color: #858e98;
+  background-color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    width: 1px;
+    top: 23px;
+    left: 50%;
+    margin-left: -0.5px;
+    // margin-left: 33px;
+    height: 100vw;
+    background-color: #e9ecef;
+  }
+
+  &--now {
+    position: absolute;
+    display: inline-block;
+    width: 49px;
+    top: 0;
+    left: 0px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 156.5px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    background-color: #007dff;
+    color: #ffffff;
+    border-radius: 100px;
+  }
+
+  &--next {
+    color: #262626;
+  }
+}
+
+.clock__item-hour span {
+  // display: inline-block;
+  // width: 66px;
+}
+
+.clock__item-hour:first-child {
+  flex-grow: 57;
+  flex-basis: 0%;
+}
+
+// .clock__item-hour:last-child {
+//   flex-grow: 55;
+//   flex-basis: 55px;
+// }
+
+.clock__timeline {
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  flex-grow: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    width: 1px;
+    top: 32px;
+    margin-left: 23.5px;
+    height: calc(100% - 32px);
+    background-color: #e9ecef;
+  }
+
+  &--now {
+    content: "";
+    position: absolute;
+    z-index: 200;
+    width: 1px;
+    top: 26px;
+    left: 0px;
+    margin-left: 181px;
+    height: calc(100% - 26px);
+    background-color: #007dff;
+  }
+}
+
+.clock__timeline--now::before {
+  display: none;
+}
+
+@media #{$desktop-width} {
+  .clock__time {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 500;
+      width: 1px;
+      top: 46px;
+      margin-left: 244px;
+      height: calc(100% - 46px);
+      background-color: #e9ecef;
+    }
+  }
+
+  .clock__item-hour {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    &::before {
+      top: 46px;
+    }
+
+    &--now {
+      margin-top: 14px;
+      margin-left: 228px;
+    }
+  }
+
+  .clock__list-hours {
+    box-sizing: border-box;
+    padding-left: 245px;
+  }
+  
+  .clock__timeline {
+    &::before {
+      top: 46px;
+      height: calc(100% - 46px);
+    }
+    &--now {
+      top: 34px;
+      margin-left: 251px;
+      height: calc(100% - 34px);
+    }
+  }
+}

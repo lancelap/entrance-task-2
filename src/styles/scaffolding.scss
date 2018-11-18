@@ -16,3 +16,14 @@ img {
   padding-bottom: 20px;
   background-color: $bg-color;
 }
+
+.container {
+  @include clearfix;
+  min-width: 360px;
+}
+
+@media #{$desktop-width} {
+  .container {
+    margin: 0 auto;
+  }
+}

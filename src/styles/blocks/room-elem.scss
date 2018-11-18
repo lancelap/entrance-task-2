@@ -1,21 +1,20 @@
 .room-elem {
-  z-index: 100;
+  width: auto;
   padding: 12px 25px 12px 15px;
-  width: 140px;
   font: medium 15px/17px $font-stack;
-  color: #000000;
+  color: #000000; 
   background-color: #ffffff;
 
   &--disabled {
-    color: #C7C7C7;
+    color: #c7c7c7;
   }
 
   &--compact {
+    display: inline-block;
     position: sticky;
-    z-index: 200;
-    left: 16px;
     width: auto;
-    height: 13px;
+    left: 16px;
+    height: 14px;
     padding: 5px 8px;
     font-size: 11px;
     line-height: 13px;
@@ -31,8 +30,8 @@
   margin: 0;
   padding: 0;
   white-space: nowrap;
-  overflow: hidden; 
-  text-overflow: ellipsis; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .room-elem__capacity {
@@ -46,31 +45,26 @@
 
 @media #{$desktop-width} {
   .room-elem {
-    padding-top: 0;
-    padding-right: 50px;
-    padding-left: 25px;
-    width: 170px;
-    z-index: 400;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 24px;
 
     &--disabled {
-      color: #858E98;
+      color: #858e98;
     }
     &--hover {
-      color: #0070E0;
+      color: #0070e0;
     }
     &--pressed {
-      color: #1D54FE;
+      color: #1d54fe;
     }
   }
   .room-elem__capacity {
     font-size: 13px;
     padding-top: 2px;
   }
-  .room-elem__name {
-    padding-top: 8px;
-  }
   .room-elem--hover .room-elem__capacity,
-  .room-elem--pressed .room-elem__capacity  {
-    color: #000000; 
+  .room-elem--pressed .room-elem__capacity {
+    color: #000000;
   }
 }

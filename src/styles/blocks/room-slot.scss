@@ -1,0 +1,52 @@
+.room-slot {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 0;
+  z-index: 100;
+  height: 58px;
+  color: #000000;
+  background-color: #ffffff;
+
+  &:active {
+    background-color: #ffffff;
+  }
+  &--no-vacancy {
+    background-color: #d5dfe9;
+  }
+  &--no-vacancy:active {
+    background-color: #98a9b9;
+  }
+}
+
+.room-slot--no-vacancy.room-slot--active {
+  background-color: #98a9b9;
+  z-index: 300;
+}
+
+.room-slot--active {
+  background-color: #005cff;
+  z-index: 300;
+}
+
+@media #{$desktop-width} {
+  .room-slot {
+    height: 28px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    &:hover {
+      z-index: 200;
+    }
+    &--no-vacancy:hover {
+      background-color: #98a9b9;
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+    &--no-vacancy:active {
+      background-color: #98a9b9;
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+  }
+  .room-slot.room-slot--active {
+    background-color: #ffffff;
+  }
+}

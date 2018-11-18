@@ -1,11 +1,7 @@
 .peregovorki-logo {
-  border-bottom: 1px solid #E9ECEF;
-}
-
-.peregovorki-container {
-  @include clearfix;
-  width: 360px;
-  margin: 0 auto;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  color: #000000;
 }
 
 .peregovorki-logo__img {
@@ -28,16 +24,15 @@
     padding-bottom: 0px;
     height: auto;
   }
-  .peregovorki-container {
-    width: 1280px;
-  }
+
   .peregovorki-logo__img {
-    width: 174px;
-    height: 24.5px;
+    width: 175px;
+    height: 26px;
     padding-top: 25px;
-    padding-left: 26px;
-    padding-bottom: 21.5px;
+    padding-left: 25px;
+    padding-bottom: 20px;
   }
+
   .peregovorki__btn-create {
     display: block;
     float: right;

@@ -2,6 +2,8 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "scaffolding.scss";
+@import "blocks/clock.scss";
+@import "blocks/room-slot.scss";
 @import "blocks/btn.scss";
 @import "blocks/btn-icon.scss";
 @import "blocks/room-elem.scss";
@@ -15,3 +17,4 @@
 @import "blocks/calendar.scss";
 @import "blocks/tooltip.scss";
 @import "blocks/modal-content.scss";
+@import "blocks/list-floors.scss";
