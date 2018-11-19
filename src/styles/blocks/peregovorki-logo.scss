@@ -1,4 +1,5 @@
 .peregovorki-logo {
+  @include clearfix;
   background-color: #ffffff;
   border-bottom: 1px solid #e9ecef;
   color: #000000;
@@ -8,9 +9,9 @@
   width: 150px;
   height: 22px;
   float: left;
-  padding-top: 16px;
-  padding-left: 20px;
-  padding-bottom: 10px;
+  margin-top: 16px;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 .peregovorki__btn-create {
@@ -28,9 +29,9 @@
   .peregovorki-logo__img {
     width: 175px;
     height: 26px;
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-bottom: 20px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 20px;
   }
 
   .peregovorki__btn-create {
