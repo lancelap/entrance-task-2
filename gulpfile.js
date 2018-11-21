@@ -8,8 +8,11 @@ const mqpacker = require('css-mqpacker');
 const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
+const svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
 const pug = require('gulp-pug');
 const del = require('del');
+const path = require('path');
 
 sass.compiler = require('node-sass');
 
@@ -94,6 +97,29 @@ gulp.task('images', function() {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task('symbols', function() {
+  return gulp.src(bases.src + 'img/icons/**/*.svg')
+    .pipe(svgmin(function (file) {
+      const prefix = path.basename(file.relative, path.extname(file.relative));
+        return {
+          plugins: [{
+            cleanupIDs: {
+              prefix: prefix + '-',
+              minify: true
+            }
+          }, {
+            removeDoctype: true
+          }, {
+            removeComments: true
+          }]
+        }
+      }))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename('symbols.svg'))
+    .pipe(gulp.dest(bases.build + 'img'))
+    .pipe(browserSync.reload({stream: true}))
+});
+
 gulp.task('deploy', function() {
   return gulp.src('./build/**/*');
 });
@@ -107,7 +133,7 @@ gulp.task('watch', function() {
   gulp.watch(bases.src + 'views/**/*.pug', gulp.series('views'));
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'images', 'style', 'views'));
+gulp.task('build', gulp.series('clean', 'copy', 'images', 'symbols', 'style', 'views'));
 
 gulp.task('serve', function() {
   browserSync.init({
