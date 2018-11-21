@@ -1,0 +1,44 @@
+.peregovorki-header {
+  @include clearfix;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  color: #000000;
+}
+
+.peregovorki-header__img {
+  width: 150px;
+  height: 22px;
+  float: left;
+  margin-top: 16px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.peregovorki-header__btn-create {
+  display: none;
+}
+
+@media #{$desktop-width} {
+  .peregovorki-header {
+    padding-top: 0px;
+    padding-left: 0;
+    padding-bottom: 0px;
+    height: auto;
+  }
+
+  .peregovorki-header__img {
+    width: 175px;
+    height: 26px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
+
+  .peregovorki-header__btn-create {
+    display: block;
+    float: right;
+    padding-top: 18px;
+    padding-right: 20px;
+    padding-bottom: 17px;
+  }
+}
