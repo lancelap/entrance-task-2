@@ -4,17 +4,29 @@
   z-index: 1000;
 }
 
-.calendar__change-day {
-  top: 12px;
-
-  &--previous {
-    left: 16px;
-  }
+.calendar__button {
+  position: relative;
+  width: 30px;
+  height: 30px;
 
   &--next {
-    right: 16px;
     transform: rotate(180deg);
   }
+}
+
+.calendar__button:hover .calendar__button-icon {
+  opacity: 1;
+}
+
+.calendar__button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 14px;
+  margin-left: -6.5px;
+  margin-top: -7px;
+  opacity: .43;
 }
 
 .calendar__data {
@@ -22,8 +34,8 @@
   margin: 0;
   padding: 0;
   font: 600 15px/18px $font-stack;
-  margin-left: 52px;
-  margin-right: 52px;
+  margin-left: 58px;
+  margin-right: 58px;
   padding-top: 18px;
   padding-bottom: 20px;
   text-align: center;
@@ -43,8 +55,7 @@
   }
 }
 
-.calendar__selected-day {
-  @include reset-list();
+.calendar__control {
   display: flex;
   align-items: center;
   justify-content: center;

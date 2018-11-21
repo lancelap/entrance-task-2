@@ -1,4 +1,5 @@
 .btn {
+  position: relative;
   display: inline-block;
   padding-top: 12px;
   padding-right: 24px;
@@ -39,6 +40,12 @@
   &--primary-big {
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  &--round {
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
   }
 
   &--few-btn {
@@ -106,6 +113,15 @@
       background-color: #E9ECEF;
       background-color: rgba(4,29,56,0.14);
     }
+
+    &--round {
+      font-size: 0;
+      line-height: 0;
+      margin: 0;
+      padding: 0;
+      border-radius: 50%;
+    }
+  
     &--delete {
       width: auto;
       order: 2;
