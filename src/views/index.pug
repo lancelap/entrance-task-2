@@ -11,24 +11,22 @@ html(lang="ru")
     div(style="display: none")
      include ../../build/img/symbols.svg
 
-    .peregovorki-header
+    header.peregovorki-header
       a(href="#") 
         img(class="peregovorki-header__img" src="/img/logo.svg", alt="Яндекс Перговорки" width="150px" height="22px")
 
       .peregovorki-header__btn-create
         .btn.btn--primary Создать встречу
     
-    .timetable
-      .timetable__calendar
-        .calendar
-          .calendar__control
-            button.btn.btn--round.calendar__button
-              svg(class="calendar__button-icon" viewbox="0 0 9 14")
-                use(xlink:href="#arrow")
+    main.timetable
+      .calendar.timetable__calendar
+        button.btn.btn--round.calendar__button
+          svg(class="calendar__button-icon" viewbox="0 0 9 14")
+            use(xlink:href="#arrow")
 
-            .calendar__data 14 дек
-              span.calendar__today Сегодня
+        .calendar__data 14 дек
+          span.calendar__today Сегодня
 
-            button.btn.btn--round.calendar__button.calendar__button--next
-              svg(class="calendar__button-icon" viewbox="0 0 9 14")
-                use(xlink:href="#arrow")
+        button.btn.btn--round.calendar__button.calendar__button--next
+          svg(class="calendar__button-icon" viewbox="0 0 9 14")
+            use(xlink:href="#arrow")

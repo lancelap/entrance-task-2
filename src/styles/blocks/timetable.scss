@@ -2,21 +2,21 @@
   position: relative;
 }
 
-.b-timetable {
-  height: 100%;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-}
+// .b-timetable {
+//   height: 100%;
+//   overflow: scroll;
+//   display: flex;
+//   flex-direction: column;
+// }
 
 
-.b-timetable__header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background-color: blue;
-}
+// .b-timetable__header {
+//   position: sticky;
+//   top: 0;
+//   left: 0;
+//   z-index: 10;
+//   background-color: blue;
+// }
 
 .timetable__table {
   position: relative;
@@ -101,7 +101,7 @@
   }
 
   .timetable__calendar {
-    position: absolute;
+    // position: absolute;
     top: 0;
     left: 18px;
   }

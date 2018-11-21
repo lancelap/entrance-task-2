@@ -1,7 +1,9 @@
 .calendar {
   position: relative;
   min-width: 360px;
-  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .calendar__button {
@@ -53,12 +55,6 @@
   &::before {
     content: ' · ';
   }
-}
-
-.calendar__control {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .calendar__date-picker {
