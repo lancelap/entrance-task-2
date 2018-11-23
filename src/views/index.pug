@@ -8,25 +8,78 @@ html(lang="ru")
     link(rel="stylesheet", href="css/style.min.css")
 
   body
+    
     div(style="display: none")
      include ../../build/img/symbols.svg
 
-    header.peregovorki-header
-      a(href="#") 
-        img(class="peregovorki-header__img" src="/img/logo.svg", alt="Яндекс Перговорки" width="150px" height="22px")
+    .timetable
+      header.timetable__header.peregovorki-header
+        a(href="#") 
+          img(class="peregovorki-header__img" src="/img/logo.svg", alt="Яндекс Перговорки" width="150px" height="22px")
 
-      .peregovorki-header__btn-create
-        .btn.btn--primary Создать встречу
-    
-    main.timetable
-      .calendar.timetable__calendar
-        button.btn.btn--round.calendar__button
-          svg(class="calendar__button-icon" viewbox="0 0 9 14")
-            use(xlink:href="#arrow")
+        .peregovorki-header__btn-create
+          .btn.btn--primary Создать встречу
+  
+      .timetable__calendar
+        .calendar
+          button.btn.btn--round.calendar__button
+            svg(class="calendar__button-icon" viewbox="0 0 9 14")
+              use(xlink:href="#arrow")
 
-        .calendar__data 14 дек
-          span.calendar__today Сегодня
+          .calendar__data 14 дек
+            span.calendar__today Сегодня
 
-        button.btn.btn--round.calendar__button.calendar__button--next
-          svg(class="calendar__button-icon" viewbox="0 0 9 14")
-            use(xlink:href="#arrow")
+          button.btn.btn--round.calendar__button.calendar__button--next
+            svg(class="calendar__button-icon" viewbox="0 0 9 14")
+              use(xlink:href="#arrow")
+
+      ul.timetable__clock
+        span lokp 
+      
+      main.timetable__content
+        .list-floors.timetable__list-floors
+
+          p.list-floors__floor-number 7 этаж
+          ul.list-floors__floors
+            li.list-floors__room 
+              .room-elem.room-elem--disabled
+                p.room-elem__name Ржавый Фред
+                p.room-elem__capacity 3—6 человек
+            li.list-floors__room 
+              .room-elem
+                p.room-elem__name Прачечная
+                p.room-elem__capacity до 10 человек
+            li.list-floors__room 
+              .room-elem.room-elem--active 
+                p.room-elem__name Жёлтый дом
+                p.room-elem__capacity до 10 человек
+            li.list-floors__room 
+              .room-elem.room-elem--disabled
+                p.room-elem__name Оранжевый тюльпан
+                p.room-elem__capacity до 10 человек
+
+          p.list-floors__floor-number 6 этаж
+          ul.list-floors__floors
+            li.list-floors__room 
+              .room-elem
+                p.room-elem__name Джокер 
+                p.room-elem__capacity 3—6 человек
+            li.list-floors__room 
+              .room-elem
+                p.room-elem__name Мариванна 
+                p.room-elem__capacity 3—6 человек
+            li.list-floors__room 
+              .room-elem
+                p.room-elem__name Тонкий Боб
+                p.room-elem__capacity 3—6 человек
+            li.list-floors__room 
+              .room-elem
+                p.room-elem__name Чёрная вдова
+                p.room-elem__capacity 3—6 человек
+            li.list-floors__room 
+              .room-elem
+                p.room-elem__name Белорусский ликёр
+                p.room-elem__capacity 3—6 человек
+
+
+        span(style="position: sticky") assd

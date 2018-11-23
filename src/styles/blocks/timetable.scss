@@ -1,48 +1,48 @@
 .timetable {
-  position: relative;
+  height: 100vh;
+  min-width: 360px;
+  overflow: auto;
 }
 
-// .b-timetable {
-//   height: 100%;
-//   overflow: scroll;
-//   display: flex;
-//   flex-direction: column;
-// }
+.timetable__header {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
 
+.timetable__calendar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2000;
 
-// .b-timetable__header {
-//   position: sticky;
-//   top: 0;
-//   left: 0;
-//   z-index: 10;
-//   background-color: blue;
-// }
-
-.timetable__table {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  margin: 0 auto;
-  min-width: 360px;
-  overflow: scroll;
-  background-color: #f7f8f9;
+  background: #ffffff;
   border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.timetable__clock {
+  @include reset-list();
+  position: sticky;
+  top: 58px;
+  z-index: 2000;
+
+  height: 32px;
+  min-width: 1043px;
+  padding-left: 181px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__content {
   display: flex;
   flex-flow: row nowrap;
-  min-width: 1225px;
-}
 
-.timetable__clock {
   min-width: 1225px;
-  z-index: 200;
-}
+  min-height: calc(100vh - 138px);
 
-.timetable__clock-list-hours {
-  @include reset-list();
-  padding-left: 180px;
+  background-color: #f7f8f9;
 }
 
 .timetable__item-timeline {
@@ -54,94 +54,49 @@
 }
 
 .timetable__list-floors {
-  @include reset-list();
   position: sticky;
   left: 0;
-  z-index: 300;
-  width: 180px;
+  z-index: 1000;
+
+  flex-grow: 0;
   flex-shrink: 0;
-  flex-grow: 1;
-  margin-right: 1px;
-  background-color: transparent;
-}
-
-.timetable__list-timeline {
-  @include reset-list();
-  flex-grow: 1;
-  padding-top: 45px;
-}
-
-.timetable__list-timeline:first-child {
-  padding-top: 37px;
-}
-
-.timetable__btn-create {
-  display: none;
-}
-
-.timetable__slot-button {
-  display: none;
 }
 
 @media #{$desktop-width} {
   .timetable {
-    margin: 0 auto;
-    border-right: 1px solid #e9ecef;
-    border-bottom: 1px solid #e9ecef;
-    border-left: 1px solid #e9ecef;
+    position: relative;
   }
 
-  .timetable__list-floors {
-    width: 245px;
-  }  
+  .timetable__content {
+    min-height: calc(100vh - 117px);
+  }
 
-  .timetable__table {
-    overflow: hidden;
-    border-top: none;
+  .timetable__header {
+    position: static;
   }
 
   .timetable__calendar {
-    // position: absolute;
-    top: 0;
-    left: 18px;
-  }
-
-  .timetable__list-timeline {
-    padding-top: 30px;
-  }
-
-  .timetable__list-timeline:first-child {
-    padding-top: 38px;
-  }
-
-  .timetable__item-timeline {
-    margin-bottom: 8px;
-  }
-  
-  .timetable__floor-number:first-of-type {
-    margin-top: 0px;
-  }
-
-  .timetable__btn-create {
-    display: block;
-    position: absolute;
-    top: -55px;
-    right: 24px;
-  }
-  
-  .timetable__slot-button {
-    display: block;
-    position: absolute;
-    top: 0;
+    position: sticky;
     left: 0;
-    width: 56px;
-    height: 28px;
-    margin-left: -28px;
-    background-color: #2b50fd;
-    border-radius: 2px;
+    z-index: 3000;
 
-    &:active {
-      background-color: #1d00fe;
-    }
+    width: 250px;
+    margin-bottom: -46px;
+
+    border: none;
+  }
+
+  .timetable__clock {
+    top: 0;
+    
+    height: 45px;
+    min-width: 975px;
+    padding-left: 250px;
+    
+    border-top: 1px solid #e9ecef;
+  }
+
+  .timetable__list-floors {
+    background-color: #ffffff;
   }
 }

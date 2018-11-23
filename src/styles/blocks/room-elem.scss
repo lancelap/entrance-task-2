@@ -1,9 +1,10 @@
 .room-elem {
-  width: auto;
-  padding: 12px 25px 12px 15px;
-  font: medium 15px/17px $font-stack;
+  padding: 11px 16px 11px 16px;
+
   color: #000000; 
+  
   background-color: #ffffff;
+  border-right: 1px solid #E9ECEF;
 
   &--disabled {
     color: #c7c7c7;
@@ -11,32 +12,37 @@
 
   &--compact {
     display: inline-block;
-    position: sticky;
     width: auto;
-    left: 16px;
-    height: 14px;
+    margin-left: 16px;
     padding: 5px 8px;
-    font-size: 11px;
-    line-height: 13px;
-    letter-spacing: 0.4px;
+
+    border-radius: 4px;
     box-shadow: 0 1px 8px 0 #002c5c;
     box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
-    border-radius: 4px;
   }
 }
 
 .room-elem__name {
-  font-weight: bold;
   margin: 0;
   padding: 0;
-  white-space: nowrap;
   overflow: hidden;
+
+  font: medium 15px/19px "HelveticaNeue-Medium", $font-stack;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room-elem--compact .room-elem__name {
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.4px;
 }
 
 .room-elem__capacity {
   margin: 0;
   padding: 0;
+
+  font: normal 13px/17px $font-stack;
 }
 
 .room-elem--compact .room-elem__capacity {
@@ -45,14 +51,14 @@
 
 @media #{$desktop-width} {
   .room-elem {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 24px;
+    padding: 3px 25px 3px 25px;
+
+    border: none;
 
     &--disabled {
       color: #858e98;
     }
-    &--hover {
+    &--active {
       color: #0070e0;
     }
     &--pressed {
@@ -60,10 +66,11 @@
     }
   }
   .room-elem__capacity {
-    font-size: 13px;
     padding-top: 2px;
+
+    font-size: 13px;
   }
-  .room-elem--hover .room-elem__capacity,
+  .room-elem--active .room-elem__capacity,
   .room-elem--pressed .room-elem__capacity {
     color: #000000;
   }
