@@ -1,13 +1,15 @@
 .calendar {
   position: relative;
-  min-width: 360px;
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-width: 360px;
 }
 
 .calendar__button {
   position: relative;
+
   width: 30px;
   height: 30px;
 
@@ -24,24 +26,26 @@
   position: absolute;
   top: 50%;
   left: 50%;
+
   width: 9px;
   height: 14px;
-  margin-left: -6.5px;
   margin-top: -7px;
+  margin-left: -6.5px;
+
   opacity: .43;
 }
 
 .calendar__data {
   width: 150px;
   margin: 0;
-  padding: 0;
-  font: medium 15px/18px "HelveticaNeue-Medium", $font-stack;
-  margin-left: 58px;
   margin-right: 58px;
-  padding-top: 18px;
+  margin-left: 58px;
+  padding: 0;
+  padding-top: 17px;
   padding-bottom: 20px;
+
+  font: medium 15px/18px "HelveticaNeue-Medium", $font-stack;
   text-align: center;
-  letter-spacing: 0;
 }
 
 .calendar__data a {
@@ -59,21 +63,24 @@
 
 .calendar__date-picker {
   position: absolute;
-  z-index: 1001;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   left: 50%;
+  z-index: 1001;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 360px;
   margin-left: -180px;
+
   background: #FFFFFF;
-  box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
   border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
 }
 
 .calendar__picked-mounth {
   width: 200px;
+
   font: bold 20px/25px $font-stack;
   text-align: center;
 }
@@ -87,14 +94,17 @@
   flex-basis: 100%;
   margin: 0;
   padding: 10px 0;
-  background-color: #DDE0E4;
+
   font-size: 0;
   line-height: 0;
+
+  background-color: #DDE0E4;
 }
 
 .calendar__weekday {
   display: inline-block;
   width: 51.42px;
+
   font: bold 15px/17px $font-stack;
   color: #666;
   text-align: center;
@@ -104,17 +114,19 @@
   @include reset-list();
   margin: 0;
   padding: 10px 0;
+
   font-size: 0;
   line-height: 0;
 }
 
 .calendar__day {
   display: inline-block;
-  vertical-align: middle;
   width: 14.28%;
+
   font: bold 15px/17px $font-stack;
   color: #666;
   text-align: center;
+  vertical-align: middle;
 
   &--active {
     color: #005CFF;
@@ -125,19 +137,23 @@
 .calendar__day a {
   display: inline-block;
   width: 50px;
+  
   font: bold 15px/50px $font-stack;
   color: #000000;
   text-align: center;
   text-decoration: none;
+  
   border-radius: 50%;
 
   &:hover {
     color: #000000;
+
     background-color: #E9ECEF;
   }
 
   &:active {
     color: #ffffff;
+
     background-color: #005CFF;
   }
 }
@@ -146,9 +162,11 @@
   display: inline-block;
   width: 50px;
   height: 50px;
+
   font: bold 15px/50px $font-stack;
-  text-align: center;
   color: #ffffff;
+  text-align: center;
+
   background-color: #005CFF;
   border-radius: 50%;
 }
@@ -157,16 +175,19 @@
   .calendar {
     min-width: 210px;
   }
+
   .calendar__button {
     width: 24px;
     height: 24px;
   }
+
   .calendar__button-icon {
     width: 7px;
     height: 11px;
-    margin-left: -4.5px;
     margin-top: -5.5px;
+    margin-left: -4.5px;
   }
+
   .calendar__data {
     width: 124px;
     margin-right: 13px;
@@ -174,14 +195,17 @@
     padding-top: 13px;
     padding-bottom: 14px;
   }
+
   .calendar__data--pressed a {
     font-weight: bold;
     color: #0070E0;
   }
+  
   .calendar__date-picker {
-    left: 0;
     top: 45px;
+    left: 0;
     z-index: 1000;
+    
     margin: 0;
   }
 }
