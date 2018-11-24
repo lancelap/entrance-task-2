@@ -1,6 +1,7 @@
 .list-floors {
   display: flex;
   flex-flow: column nowrap;
+  width: 181px;
 
   padding-top: 15px;
 }
@@ -18,22 +19,26 @@
 
 .list-floors__floors {
   @include reset-list();
-  margin-bottom: 24px;
-
-  &--compact {
-    margin-left: 16px;
-  }
+  margin-bottom: 22px;
 }
 
 .list-floors__room {
-  width: 181px;
-  height: 58px;
   margin-bottom: 2px;
+}
+
+@media #{$mobile-width-only} {
+  .list-floors__room {
+    &--compact{
+      margin-bottom: 37px;
+      margin-left: 12px;
+    }
+  }
 }
 
 
 @media #{$desktop-width} {
   .list-floors {
+    width: 245px;
     padding-top: 22px;
 
     border-right: 1px solid #E9ECEF;
@@ -48,9 +53,7 @@
     margin-bottom: 12px;
   }
 
-  .list-floors__room {
-    width: 245px;
-    height: auto;
+  .list-floors__room {  
     margin-bottom: 8px;
   }
 }
