@@ -1,17 +1,20 @@
 .btn {
   position: relative;
+
   display: inline-block;
   padding-top: 12px;
   padding-right: 24px;
   padding-bottom: 14px;
   padding-left: 24px;
+
   font: medium 13px/16px $font-stack;
-  text-decoration: none;
-  vertical-align: top;
+  color: #000000;
   text-align: center;
   text-decoration: none;
+  text-decoration: none;
   text-transform: none;
-  color: #000000;
+  vertical-align: top;
+
   background-color: #E9ECEF;
   border-style: none;
   border-radius: 4px;
@@ -21,15 +24,17 @@
   }
 
   &:disabled {
-    background-color: #E9ECEF;
     color: #000000; /* Fallback for older browsers */
     color: rgba(0, 0, 0, 0.2);
     pointer-events: none;
     cursor: default;
+
+    background-color: #E9ECEF;
   }
   
   &--primary {
     color: #ffffff;
+
     background-color: #007DFF;
   
     &:active {
@@ -38,13 +43,14 @@
   }
   
   &--primary-big {
-    padding-left: 32px;
     padding-right: 32px;
+    padding-left: 32px;
   }
 
   &--round {
     margin: 0;
     padding: 0;
+
     border-radius: 50%;
   }
 
@@ -85,13 +91,15 @@
 @media #{$mobile-width-only} {
   .btn {
     &--delete {
-      padding-top: 16px;
-      padding-bottom: 20px;
       display: inline-block;
       width: 100%;
+      padding-top: 16px;
+      padding-bottom: 20px;
+
       font: medium 15px/18px  $font-stack;
-      text-align: center;
       color: #FF3333;
+      text-align: center;
+
       background-color: #ffffff;
       border-radius: 0;
     }  
@@ -100,11 +108,12 @@
 
 @media #{$desktop-width} {
   .btn {
-    font: medium 13px/16px $font-stack;
     padding-top: 10px;
     padding-right: 16px;
     padding-bottom: 10px;
     padding-left: 16px;
+
+    font: medium 13px/16px $font-stack;
     &:hover {
       background-color: #E9ECEF;
       background-color: rgba(0,16,33,0.05);
@@ -115,27 +124,31 @@
     }
 
     &--round {
-      font-size: 0;
-      line-height: 0;
       margin: 0;
       padding: 0;
+
+      font-size: 0;
+      line-height: 0;
+
       border-radius: 50%;
     }
   
     &--delete {
-      width: auto;
       order: 2;
+      width: auto;
     }
     &--cancel {
-      margin: 0;
       order: 1;
+      margin: 0;
       margin-right: 16px;
     }
     &--save {
       order: 3;
       margin: 0;
       margin-left: 16px;
+
       color: #000000;
+
       background-color: #E9ECEF;
     
       &:active {
@@ -147,8 +160,8 @@
       }
     }
     &--form-meeting {
-      margin-left: 16px;
       width: auto;
+      margin-left: 16px;
     }
     &--primary:hover  {
       background-color: #0059FF;

@@ -1,10 +1,13 @@
 .room-slot {
   position: relative;
+  z-index: 100;
+
   flex-grow: 1;
   flex-shrink: 0;
-  z-index: 100;
   height: 58px;
+
   color: #000000;
+
   background-color: #ffffff;
 
   &:active {
@@ -19,13 +22,15 @@
 }
 
 .room-slot--no-vacancy.room-slot--active {
-  background-color: #98a9b9;
   z-index: 300;
+
+  background-color: #98a9b9;
 }
 
 .room-slot--active {
-  background-color: #005cff;
   z-index: 300;
+
+  background-color: #005cff;
 }
 
 @media #{$desktop-width} {

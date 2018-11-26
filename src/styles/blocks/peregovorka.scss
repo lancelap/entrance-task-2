@@ -1,24 +1,29 @@
 .peregovorka {
   position: relative;
+
   width: 293px;
   padding-top: 14px;
   padding-right: 23px;
   padding-bottom: 14px;
   padding-left: 12px;
-  color: #000000;
+
   font-size: 0;
   line-height: 0;
+  color: #000000;
+
   background-color: #E9ECEF;
   border-radius: 4px;
 
   &--selected {
-    background-color: #007DFF;
     color: #ffffff;
+
+    background-color: #007DFF;
   }
 }
 
 .peregovorka__time {
   margin-right: 12px;
+
   font: bold 15px/17px $font-stack;
   letter-spacing: 0;
 }

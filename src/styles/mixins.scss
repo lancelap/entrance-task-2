@@ -1,14 +1,16 @@
 @mixin clearfix() {
   &::after {
-    content: "";
     display: table;
     clear: both;
+
+    content: "";
   }
 }
 
 @mixin reset-list() {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -18,13 +20,15 @@
   padding-right: 24px;
   padding-bottom: 14px;
   padding-left: 24px;
+
   font: medium 15px/18px $font-stack;
-  text-decoration: none;
-  vertical-align: top;
+  color: #000000;
   text-align: center;
   text-decoration: none;
+  text-decoration: none;
   text-transform: none;
-  color: #000000;
+  vertical-align: top;
+
   background-color: #E9ECEF;
   border-style: none;
   border-radius: 4px;
@@ -34,11 +38,12 @@
   }
 
   &:disabled {
-    background-color: #E9ECEF;
     color: #000000; /* Fallback for older browsers */
     color: rgba(0, 0, 0, 0.2);
     pointer-events: none;
     cursor: default;
+
+    background-color: #E9ECEF;
   }
   
 }
@@ -46,8 +51,8 @@
 @mixin container() {
   min-width: 328px;
   margin: 0 auto;
-  padding-left: 16px;
   padding-right: 16px;
+  padding-left: 16px;
 
   // @media #{$desktop-width} {
   //   max-width: 1200px;

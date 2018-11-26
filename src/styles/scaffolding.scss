@@ -1,19 +1,21 @@
 body {
   font: normal 14px/26px $font-stack;
-  text-transform: none;
   color: $primary-color;
-  background-color: $bg-color;
   text-align: left;
+  text-transform: none;
+
+  background-color: $bg-color;
 }
 
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 .wrapper {
   @include container;
   padding-bottom: 20px;
+
   background-color: $bg-color;
 }
 
