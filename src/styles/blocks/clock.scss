@@ -1,4 +1,6 @@
 .clock {
+  background: #ffffff;
+  border-top: 1px solid #e9ecef;  
   border-bottom: 1px solid #e9ecef;
 }
 
@@ -16,31 +18,31 @@
 
   flex-grow: 66;
   flex-shrink: 0;
-  flex-basis: 0%;
-  margin-top: 9px;
-  margin-bottom: 10px;
+  flex-basis: 66px;
+  height: 100%;
   padding: 0;
 
-  font: bold 11px/13px $font-stack;
+  font: bold 11px/32px $font-stack;
   letter-spacing: 0.4px;
   color: #858e98;
   text-align: center;
+  vertical-align: top;
 
   background-color: #ffffff;
 
   &::before {
     position: absolute;
-    top: 23px;
+    top: 100%;
     left: 50%;
     z-index: 100;
 
     width: 1px;
-    // margin-left: 33px;
-    height: 100vw;
-    margin-left: -0.5px;
-
+    height: calc(100vh - 138px);
+    
     background-color: #e9ecef;
     content: "";
+
+    transform: translate(-50%, 0);
   }
 
   &--now {
@@ -65,21 +67,6 @@
   &--next {
     color: #262626;
   }
-}
-
-.clock__item-hour span {
-  display: inline-block;
-  width: 66px;
-}
-
-.clock__item-hour:first-child {
-  flex-grow: 57;
-  flex-basis: 0%;
-}
-
-.clock__item-hour:last-child {
-  flex-grow: 55;
-  flex-basis: 55px;
 }
 
 .clock__timeline {
@@ -137,11 +124,10 @@
   }
 
   .clock__item-hour {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    line-height: 45px;
 
     &::before {
-      top: 46px;
+      height: calc(100vh - 117px);
     }
 
     &--now {
@@ -158,9 +144,9 @@
   
   .clock__timeline {
     &::before {
-      top: 46px;
+      top: 0;
 
-      height: calc(100% - 46px);
+      height: calc(100vh - 119px);
     }
     &--now {
       top: 34px;

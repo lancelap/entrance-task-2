@@ -1,4 +1,11 @@
 .calendar {
+  color: #000000;
+
+  background: #ffffff;
+  border-top: 1px solid #e9ecef;
+}
+
+.calendar__inner {
   position: relative;
 
   display: flex;
@@ -172,8 +179,8 @@
 }
 
 @media #{$desktop-width} {
-  .calendar {
-    min-width: 210px;
+  .calendar__inner {
+    min-width: auto;
   }
 
   .calendar__button {

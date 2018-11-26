@@ -8,39 +8,33 @@
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 2000;
 }
 
 .timetable__calendar {
   position: sticky;
-  top: 0;
+  top: 48px;
   left: 0;
   z-index: 2000;
-
-  background: #ffffff;
-  border-top: 1px solid #e9ecef;
-  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__clock {
   @include reset-list();
   position: sticky;
-  top: 58px;
+  top: 105px;
   z-index: 2000;
 
   display: flex;
   height: 32px;
-  min-width: 1043px;
+  min-width: 1056px;
   padding-left: 181px;
-
-  background: #ffffff;
-  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__content {
   display: flex;
   flex-flow: row nowrap;
 
-  min-width: 1225px;
+  min-width: 1237px;
   min-height: calc(100vh - 138px);
 
   background-color: #f7f8f9;
@@ -66,22 +60,20 @@
 @media #{$desktop-width} {
   .timetable {
     position: relative;
+    
+    overflow-x: hidden; 
   }
 
   .timetable__content {
     min-height: calc(100vh - 119px);
   }
 
-  .timetable__header {
-    position: static;
-  }
-
   .timetable__calendar {
-    position: sticky;
+    top: 71px;
     left: 0;
     z-index: 3000;
 
-    width: 250px;
+    width: 245px;
     height: 45px;
     margin-bottom: -46px;
 
@@ -89,11 +81,11 @@
   }
 
   .timetable__clock {
-    top: 0;
+    top: 71px;
     
     height: 45px;
-    min-width: 975px;
-    padding-left: 250px;
+    min-width: 976px;
+    padding-left: 244px;
     
     border-top: 1px solid #e9ecef;
   }
