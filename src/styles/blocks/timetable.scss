@@ -9,8 +9,6 @@
   top: 0;
   left: 0;
   z-index: 2000;
-  
-  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__calendar {
@@ -19,7 +17,7 @@
   left: 0;
   z-index: 2000;
 
-  border-bottom: 1px solid #e9ecef;
+  // border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__clock {
@@ -27,10 +25,8 @@
   position: sticky;
   top: 105px;
   z-index: 2000;
-
-  min-width: 1056px;
  
-  border-bottom: 1px solid #e9ecef;
+  // border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__hour {
@@ -39,26 +35,8 @@
   }
 }
 
-
 .timetable__content {
-  display: flex;
-  flex-flow: row nowrap;
-
-  min-width: 1237px;
   min-height: calc(100vh - 137px);
-
-  background-color: #f7f8f9;
-}
-
-.timetable__list-floors {
-  position: sticky;
-  left: 0;
-  z-index: 1000;
-
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 181px;
-  padding-top: 16px;
 }
 
 @media #{$desktop-width} {
@@ -92,11 +70,5 @@
     top: 72px;
     
     height: 45px;
-    min-width: 976px;
-    padding-left: 244px;
-  }
-
-  .timetable__list-floors {
-    background-color: #ffffff;
   }
 }

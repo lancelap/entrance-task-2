@@ -5,6 +5,7 @@
   padding-left: 181px;
 
   background: #ffffff;
+  border-bottom: 1px solid #e9ecef;
 }
 
 .clock__list-hours {
@@ -110,7 +111,7 @@
 
 @media #{$desktop-width} {
   .clock {
-    padding-left: 0;
+    padding-left: 246px;
   }
 
   .clock__item-hour {
