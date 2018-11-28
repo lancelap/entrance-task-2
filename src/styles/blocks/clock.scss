@@ -1,7 +1,10 @@
 .clock {
+  @include reset-list();
+  display: flex;
+  min-width: 1056px;
+  padding-left: 181px;
+
   background: #ffffff;
-  border-top: 1px solid #e9ecef;  
-  border-bottom: 1px solid #e9ecef;
 }
 
 .clock__list-hours {
@@ -20,7 +23,6 @@
   flex-shrink: 0;
   flex-basis: 66px;
   height: 100%;
-  padding: 0;
 
   font: bold 11px/32px $font-stack;
   letter-spacing: 0.4px;
@@ -37,7 +39,6 @@
     z-index: 100;
 
     width: 1px;
-    height: calc(100vh - 138px);
     
     background-color: #e9ecef;
     content: "";
@@ -108,27 +109,12 @@
 }
 
 @media #{$desktop-width} {
-  .clock__time {
-    &::after {
-      position: absolute;
-      top: 46px;
-      z-index: 500;
-
-      width: 1px;
-      height: calc(100% - 46px);
-      margin-left: 244px;
-
-      background-color: #e9ecef;
-      content: "";
-    }
+  .clock {
+    padding-left: 0;
   }
 
   .clock__item-hour {
     line-height: 45px;
-
-    &::before {
-      height: calc(100vh - 117px);
-    }
 
     &--now {
       margin-top: 14px;
@@ -136,12 +122,6 @@
     }
   }
 
-  .clock__list-hours {
-    padding-left: 245px;
-
-    box-sizing: border-box;
-  }
-  
   .clock__timeline {
     &::before {
       top: 0;

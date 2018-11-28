@@ -7,22 +7,23 @@ html(lang="ru")
     title Яндекс Переговорки
     link(rel="stylesheet", href="css/style.min.css")
 
-  body
+  body.body
     
     div(style="display: none")
      include ../../build/img/symbols.svg
 
     .timetable
-      header.timetable__header.peregovorki-header
-        a(href="#") 
-          img(class="peregovorki-header__img" src="/img/logo.svg", alt="Яндекс Перговорки" width="150px" height="22px")
+      header.timetable__logo
+        .peregovorki-logo
+          a(href="/" class="peregovorki-logo__link")
+            img(class="peregovorki-logo__img" src="/img/logo.svg", alt="Яндекс Перговорки" width="150px" height="22px")
 
-        .peregovorki-header__btn-create
-          .btn.btn--primary Создать встречу
+          
+          .btn.btn--primary.peregovorki-logo__btn-create Создать встречу
   
       
-      nav.calendar.timetable__calendar
-        .calendar__inner
+      aside.timetable__calendar
+        .calendar
           button.btn.btn--round.calendar__button
             svg(class="calendar__button-icon" viewbox="0 0 9 14")
               use(xlink:href="#arrow")
@@ -34,38 +35,39 @@ html(lang="ru")
             svg(class="calendar__button-icon" viewbox="0 0 9 14")
               use(xlink:href="#arrow")
 
-      ul.clock.timetable__clock
-          li.clock__item-hour
+      aside.timetable__clock
+        ul.clock
+          li.clock__item-hour.timetable__hour
             span 8  
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 9      
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 10
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 11
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
            span 12
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 13
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 14
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 15
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 16
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 17
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 18
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 19
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 20
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 21
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 22
-          li.clock__item-hour
+          li.clock__item-hour.timetable__hour
             span 23
       
       main.timetable__content

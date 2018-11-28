@@ -3,7 +3,7 @@
     display: table;
     clear: both;
 
-    content: "";
+    content: " ";
   }
 }
 
@@ -46,15 +46,4 @@
     background-color: #E9ECEF;
   }
   
-}
-
-@mixin container() {
-  min-width: 328px;
-  margin: 0 auto;
-  padding-right: 16px;
-  padding-left: 16px;
-
-  // @media #{$desktop-width} {
-  //   max-width: 1200px;
-  // }
 }

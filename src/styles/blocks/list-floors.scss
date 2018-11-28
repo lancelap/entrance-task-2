@@ -1,9 +1,6 @@
 .list-floors {
   display: flex;
   flex-flow: column nowrap;
-  width: 181px;
-
-  padding-top: 15px;
 }
 
 .list-floors__floor-number {
@@ -19,11 +16,11 @@
 
 .list-floors__floors {
   @include reset-list();
-  margin-bottom: 22px;
+  padding-bottom: 22px;
 }
 
 .list-floors__room {
-  margin-bottom: 2px;
+  padding-bottom: 2px;
 }
 
 @media #{$mobile-width-only} {
@@ -50,10 +47,10 @@
   }
 
   .list-floors__floors {
-    margin-bottom: 12px;
+    padding-bottom: 12px;
   }
 
-  .list-floors__room {  
-    margin-bottom: 8px;
+  .list-floors__room { 
+    padding-bottom: 8px;
   }
 }

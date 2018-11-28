@@ -4,18 +4,22 @@
   overflow: auto;
 }
 
-.timetable__header {
+.timetable__logo {
   position: sticky;
   top: 0;
   left: 0;
   z-index: 2000;
+  
+  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__calendar {
   position: sticky;
-  top: 48px;
+  top: 50px;
   left: 0;
   z-index: 2000;
+
+  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__clock {
@@ -24,28 +28,26 @@
   top: 105px;
   z-index: 2000;
 
-  display: flex;
-  height: 32px;
   min-width: 1056px;
-  padding-left: 181px;
+ 
+  border-bottom: 1px solid #e9ecef;
 }
+
+.timetable__hour {
+  &::before {
+    min-height: calc(100vh - 137px);
+  }
+}
+
 
 .timetable__content {
   display: flex;
   flex-flow: row nowrap;
 
   min-width: 1237px;
-  min-height: calc(100vh - 138px);
+  min-height: calc(100vh - 137px);
 
   background-color: #f7f8f9;
-}
-
-.timetable__item-timeline {
-  display: flex;
-  flex-flow: row nowrap;
-  flex-grow: 1;
-  min-width: 1045px;
-  margin-bottom: 2px;
 }
 
 .timetable__list-floors {
@@ -55,6 +57,8 @@
 
   flex-grow: 0;
   flex-shrink: 0;
+  width: 181px;
+  padding-top: 16px;
 }
 
 @media #{$desktop-width} {
@@ -65,29 +69,31 @@
   }
 
   .timetable__content {
-    min-height: calc(100vh - 119px);
+    min-height: calc(100vh - 118px);
+  }
+
+  .timetable__hour {
+    &::before {
+      min-height: calc(100vh - 118px);
+    }
   }
 
   .timetable__calendar {
-    top: 71px;
+    top: 72px;
     left: 0;
     z-index: 3000;
 
-    width: 245px;
+    width: 246px;
     height: 45px;
     margin-bottom: -46px;
-
-    border-bottom: none;
   }
 
   .timetable__clock {
-    top: 71px;
+    top: 72px;
     
     height: 45px;
     min-width: 976px;
     padding-left: 244px;
-    
-    border-top: 1px solid #e9ecef;
   }
 
   .timetable__list-floors {

@@ -1,7 +1,7 @@
 @import "normalize.scss";
 @import "variables.scss";
 @import "mixins.scss";
-@import "scaffolding.scss";
+@import "blocks/body.scss";
 @import "blocks/clock.scss";
 @import "blocks/room-slot.scss";
 @import "blocks/btn.scss";
@@ -10,7 +10,7 @@
 @import "blocks/user-label.scss";
 @import "blocks/peregovorka.scss";
 @import "blocks/input-field.scss";
-@import "blocks/peregovorki-header.scss";
+@import "blocks/peregovorki-logo.scss";
 @import "blocks/form-meeting.scss";
 @import "blocks/timetable.scss";
 @import "blocks/calendar.scss";
