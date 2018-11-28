@@ -1,0 +1,35 @@
+.list-slot {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.list-slot__floor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 43px;
+}
+
+.list-slot__room {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.list-slot__slot {
+  height: 58px;
+  margin-bottom: 2px;
+}
+
+@media #{$desktop-width} {
+  .list-slot__slot {
+    height: 28px;
+    margin-bottom: 24px;
+  }
+
+  .list-slot__floor {
+    margin-bottom: 28px;
+  }
+}

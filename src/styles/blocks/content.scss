@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  min-width: 1237px;
+
+  background-color: #f7f8f9;
+}
+
+.content__list-floors {
+  position: sticky;
+  left: 0;
+  z-index: 1000;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 181px;
+  padding-top: 16px;
+}
+
+.content__list-slot {
+  width: 100%;
+  padding-top: 37px;
+}
+
+@media #{$desktop-width} {
+  .content {
+    min-width: 1302px;
+  }
+
+  .content__list-floors {
+    background-color: #ffffff;
+  }
+
+  .content__list-slot {
+    padding-top: 47px;
+  }
+}

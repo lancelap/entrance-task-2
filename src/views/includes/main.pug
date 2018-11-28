@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Яндекс Переговорки
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body.body
+    
+    div(style="display: none")
+     include ./../../../build/img/symbols.svg
+
+    .timetable
+      header.timetable__logo
+        .peregovorki-logo
+          a(href="/" class="peregovorki-logo__link")
+            img(class="peregovorki-logo__img" src="/img/logo.svg", alt="Яндекс Перговорки" width="150px" height="22px")
+
+          
+          .btn.btn--primary.peregovorki-logo__btn-create Создать встречу
+  
+      
+      aside.timetable__calendar
+        .calendar
+          button.btn.btn--round.calendar__button
+            svg(class="calendar__button-icon" viewbox="0 0 9 14")
+              use(xlink:href="#arrow")
+
+          .calendar__data 14 дек
+            span.calendar__today Сегодня
+
+          button.btn.btn--round.calendar__button.calendar__button--next
+            svg(class="calendar__button-icon" viewbox="0 0 9 14")
+              use(xlink:href="#arrow")
+
+      aside.timetable__clock
+        ul.clock
+          li.clock__item-hour.timetable__hour
+            span 8  
+          li.clock__item-hour.timetable__hour
+            span 9      
+          li.clock__item-hour.timetable__hour
+            span 10
+          li.clock__item-hour.timetable__hour
+            span 11
+          li.clock__item-hour.timetable__hour
+           span 12
+          li.clock__item-hour.timetable__hour
+            span 13
+          li.clock__item-hour.timetable__hour
+            span 14
+          li.clock__item-hour.timetable__hour
+            span 15
+          li.clock__item-hour.timetable__hour
+            span 16
+          li.clock__item-hour.timetable__hour
+            span 17
+          li.clock__item-hour.timetable__hour
+            span 18
+          li.clock__item-hour.timetable__hour
+            span 19
+          li.clock__item-hour.timetable__hour
+            span 20
+          li.clock__item-hour.timetable__hour
+            span 21
+          li.clock__item-hour.timetable__hour
+            span 22
+          li.clock__item-hour.timetable__hour
+            span 23
+      
+      main.content.timetable__content
+        block list
+          .list-floors.content__list-floors
+            p.list-floors__floor-number 7 этаж
+            ul.list-floors__floors
+              li.list-floors__room 
+                .room-elem.room-elem--disabled
+                  p.room-elem__name Ржавый Фред
+                  p.room-elem__capacity 3—6 человек
+              li.list-floors__room 
+                .room-elem
+                  p.room-elem__name Прачечная
+                  p.room-elem__capacity до 10 человек
+              li.list-floors__room 
+                .room-elem.room-elem--active 
+                  p.room-elem__name Жёлтый дом
+                  p.room-elem__capacity до 10 человек
+              li.list-floors__room 
+                .room-elem.room-elem--disabled
+                  p.room-elem__name Оранжевый тюльпан
+                  p.room-elem__capacity до 10 человек
+
+            p.list-floors__floor-number 6 этаж
+            ul.list-floors__floors
+              li.list-floors__room 
+                .room-elem
+                  p.room-elem__name Джокер 
+                  p.room-elem__capacity 3—6 человек
+              li.list-floors__room 
+                .room-elem
+                  p.room-elem__name Мариванна 
+                  p.room-elem__capacity 3—6 человек
+              li.list-floors__room 
+                .room-elem
+                  p.room-elem__name Тонкий Боб
+                  p.room-elem__capacity 3—6 человек
+              li.list-floors__room 
+                .room-elem
+                  p.room-elem__name Чёрная вдова
+                  p.room-elem__capacity 3—6 человек
+              li.list-floors__room 
+                .room-elem
+                  p.room-elem__name Белорусский ликёр
+                  p.room-elem__capacity 3—6 человек
+
+        ul.list-slot.content__list-slot
+          li.list-slot__floor
+            .list-slot__room
+              .slot.slot--no-vacancy.list-slot__slot(style="flex-grow: 99")
+              .slot.list-slot__slot(style="flex-grow: 66")
+              .slot.slot--no-vacancy.list-slot__slot(style="flex-grow: 66")
+              .slot.list-slot__slot(style="flex-grow: 825")
+            .list-slot__room
+              .slot.slot--no-vacancy.list-slot__slot
+            .list-slot__room
+              .slot.slot--no-vacancy.list-slot__slot
+            .list-slot__room
+              .slot.slot--no-vacancy.list-slot__slot
+          li.list-slot__floor 
+            .list-slot__room
+              .slot.slot--no-vacancy.list-slot__slot
+            .list-slot__room
+              .slot.slot--no-vacancy.list-slot__slot
+            .list-slot__room
+              .slot.slot--no-vacancy.list-slot__slot
+            .list-slot__room
+              .slot.slot--no-vacancy.list-slot__slot
+            .list-slot__room
+              .slot.list-slot__slot
