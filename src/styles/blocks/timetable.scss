@@ -16,8 +16,6 @@
   top: 50px;
   left: 0;
   z-index: 2000;
-
-  // border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__clock {
@@ -25,8 +23,6 @@
   position: sticky;
   top: 105px;
   z-index: 2000;
- 
-  // border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__hour {
@@ -47,12 +43,12 @@
   }
 
   .timetable__content {
-    min-height: calc(100vh - 118px);
+    min-height: calc(100vh - 117px);
   }
 
   .timetable__hour {
     &::before {
-      min-height: calc(100vh - 118px);
+      min-height: calc(100vh - 117px);
     }
   }
 
