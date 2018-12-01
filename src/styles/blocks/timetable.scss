@@ -47,12 +47,12 @@
   margin-top: 7px;
 
   &::before {
-    min-height: calc(100vh - 125px);
+    min-height: calc(100vh - 132px);
   }
 }
 
 .timetable__content {
-  min-height: calc(100vh - 137px);
+  min-height: calc(100vh - 138px);
 }
 
 @media #{$desktop-width} {
