@@ -61,113 +61,14 @@
 
 .calendar__date-picker {
   position: absolute;
+  top: 55px;
   left: 50%;
-  z-index: 1001;
+  z-index: 1000;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   width: 360px;
   margin-left: -180px;
-
-  background: #FFFFFF;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
 }
 
-.calendar__picked-mounth {
-  width: 200px;
-
-  font: bold 20px/25px $font-stack;
-  text-align: center;
-}
-
-.calendar__picked-mounth::first-letter {
-  text-transform: uppercase;
-}
-
-.calendar__weekdays {
-  @include reset-list();
-  flex-basis: 100%;
-  margin: 0;
-  padding: 10px 0;
-
-  font-size: 0;
-  line-height: 0;
-
-  background-color: #DDE0E4;
-}
-
-.calendar__weekday {
-  display: inline-block;
-  width: 51.42px;
-
-  font: bold 15px/17px $font-stack;
-  color: #666;
-  text-align: center;
-}
-
-.calendar__days {
-  @include reset-list();
-  margin: 0;
-  padding: 10px 0;
-
-  font-size: 0;
-  line-height: 0;
-}
-
-.calendar__day {
-  display: inline-block;
-  width: 14.28%;
-
-  font: bold 15px/17px $font-stack;
-  color: #666;
-  text-align: center;
-  vertical-align: middle;
-
-  &--active {
-    color: #005CFF;
-  }
-}
-
-
-.calendar__day a {
-  display: inline-block;
-  width: 50px;
-  
-  font: bold 15px/50px $font-stack;
-  color: #000000;
-  text-align: center;
-  text-decoration: none;
-  
-  border-radius: 50%;
-
-  &:hover {
-    color: #000000;
-
-    background-color: #E9ECEF;
-  }
-
-  &:active {
-    color: #ffffff;
-
-    background-color: #005CFF;
-  }
-}
-
-.calendar__day--active span {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-
-  font: bold 15px/50px $font-stack;
-  color: #ffffff;
-  text-align: center;
-
-  background-color: #005CFF;
-  border-radius: 50%;
-}
 
 @media #{$desktop-width} {
   .calendar__button {
