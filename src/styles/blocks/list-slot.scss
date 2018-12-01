@@ -20,10 +20,13 @@
 .list-slot__slot {
   flex-grow: 1;
   flex-shrink: 0;
+  margin: 0;
+  padding: 0;
 
   color: #000000;
 
   background-color: #ffffff;
+  border: none;
 
 
   &--no-vacancy {
@@ -43,7 +46,7 @@
   .list-slot__slot {
     position: relative;
 
-    &:hover {
+    &:hover, &:focus {
       background-color: #1D54FE;
       border-radius: 3px;
 
@@ -66,7 +69,7 @@
       }
     }
 
-    &--no-vacancy:hover {
+    &--no-vacancy:hover, &--no-vacancy:focus {
       background-color: #98A9B9;
       border-radius: 0;
 
@@ -88,5 +91,3 @@
     }
   }
 }
-
-

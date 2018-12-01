@@ -15,7 +15,7 @@
   position: sticky;
   top: 50px;
   left: 0;
-  z-index: 2000;
+  z-index: 3000;
 }
 
 .timetable__clock {
@@ -24,8 +24,7 @@
   top: 105px;
   z-index: 2000;
   
-  min-width: 1056px;
-  margin-left: 181px;
+  min-width: 1238px;
 }
 
 .timetable__hour {
@@ -36,7 +35,8 @@
 
 .timetable__scale {
   position: relative;
-  
+
+  margin-left: 181px;
 }
 
 .timetable__current-hour {
@@ -45,7 +45,6 @@
   z-index: 9000;
 
   margin-top: 7px;
-  margin-left: 9.4%;
 
   &::before {
     min-height: calc(100vh - 125px);
@@ -86,6 +85,9 @@
     top: 72px;
     
     height: 45px;
+  }
+
+  .timetable__scale {
     margin-left: 246px;
   }
 
