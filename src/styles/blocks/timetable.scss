@@ -23,11 +23,32 @@
   position: sticky;
   top: 105px;
   z-index: 2000;
+  
+  min-width: 1056px;
+  margin-left: 181px;
 }
 
 .timetable__hour {
   &::before {
     min-height: calc(100vh - 137px);
+  }
+}
+
+.timetable__scale {
+  position: relative;
+  
+}
+
+.timetable__current-hour {
+  position: absolute;
+  top: 0;
+  z-index: 9000;
+
+  margin-top: 7px;
+  margin-left: 9.4%;
+
+  &::before {
+    min-height: calc(100vh - 125px);
   }
 }
 
@@ -55,7 +76,6 @@
   .timetable__calendar {
     top: 72px;
     left: 0;
-    z-index: 3000;
 
     width: 246px;
     height: 45px;
@@ -66,5 +86,14 @@
     top: 72px;
     
     height: 45px;
+    margin-left: 246px;
+  }
+
+  .timetable__current-hour {
+    margin-top: 14px;
+
+    &::before {
+      min-height: calc(100vh - 106px);
+    }
   }
 }

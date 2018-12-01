@@ -1,18 +1,19 @@
 .clock {
   @include reset-list();
   display: flex;
-  min-width: 1056px;
-  padding-left: 181px;
 
   background: #ffffff;
   border-bottom: 1px solid #e9ecef;
 }
 
-.clock__list-hours {
+.clock__scale {
   display: flex;
+  margin: 0;
+  padding: 0;
 
-  font: bold 11px/13px $font-stack;
-  color: #858e98;
+  width: 100%;
+
+  list-style: none;
 
   background-color: #ffffff;
 }
@@ -23,7 +24,6 @@
   flex-grow: 66;
   flex-shrink: 0;
   flex-basis: 66px;
-  height: 100%;
 
   font: bold 11px/32px $font-stack;
   letter-spacing: 0.4px;
@@ -42,28 +42,21 @@
     width: 1px;
     
     background-color: #e9ecef;
-    content: "";
+    content: " ";
 
     transform: translate(-50%, 0);
   }
 
-  &--now {
-    position: absolute;
-    top: 0;
-    left: 0px;
-
+  &--current {
     display: inline-block;
     width: 49px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    margin-left: 156.5px;
-    padding-top: 3px;
-    padding-bottom: 4px;
 
+    font: bold 11px/20px $font-stack;
     color: #ffffff;
 
     background-color: #007dff;
     border-radius: 100px;
+    transform: translate(-50%, 0);
   }
 
   &--next {
@@ -71,55 +64,16 @@
   }
 }
 
-.clock__timeline {
-  flex-grow: 1;
-  flex-shrink: 0;
-  margin: 0;
-  padding: 0;
-
-  &::before {
-    position: absolute;
-    top: 32px;
-    z-index: 100;
-
-    width: 1px;
-    height: calc(100% - 32px);
-    margin-left: 23.5px;
-
-    background-color: #e9ecef;
-    content: "";
-  }
-
-  &--now {
-    position: absolute;
-    top: 26px;
-    left: 0px;
-    z-index: 200;
-
-    width: 1px;
-    height: calc(100% - 26px);
-    margin-left: 181px;
-
-    background-color: #007dff;
-    content: "";
-  }
-}
-
-.clock__timeline--now::before {
-  display: none;
+.clock__item-hour--current::before {
+  background-color: #007dff;
 }
 
 @media #{$desktop-width} {
-  .clock {
-    padding-left: 246px;
-  }
-
   .clock__item-hour {
     line-height: 45px;
 
-    &--now {
-      margin-top: 14px;
-      margin-left: 228px;
+    &--current { 
+      line-height: 20px;
     }
   }
 
