@@ -9,6 +9,8 @@
   top: 0;
   left: 0;
   z-index: 2000;
+
+  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__calendar {
@@ -16,6 +18,8 @@
   top: 50px;
   left: 0;
   z-index: 3000;
+
+  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__clock {
@@ -25,6 +29,8 @@
   z-index: 2000;
   
   min-width: 1238px;
+
+  border-bottom: 1px solid #e9ecef;
 }
 
 .timetable__hour {
@@ -54,6 +60,7 @@
 .timetable__content {
   min-height: calc(100vh - 138px);
 }
+
 
 @media #{$desktop-width} {
   .timetable {

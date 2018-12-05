@@ -1,0 +1,91 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Яндекс Переговорки
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body.body
+    div(style="display: none")
+     include ./../../../build/img/symbols.svg
+    .timetable
+      header.timetable__logo
+        .peregovorki-logo
+          a(href="/" class="peregovorki-logo__link")
+            img(class="peregovorki-logo__img" src="/img/logo.svg", alt="Яндекс Перговорки" width="150" height="22")
+
+      form.form-meeting.timetable__form
+        block headline
+          h1.form-meeting__h1.form-meeting__headline Новая встреча
+        fieldset.form-meeting__section.form-meeting__section--theme
+          .input-field
+            label.input-field__label(for="time-end") Тема
+            .input-field__input-with-icon
+              block inputTheme
+                input.input-field__input(placeholder="О чём будете говорить?" type="text" name="theme" id="theme")
+
+        fieldset.form-meeting__section
+          .input-field
+            label.input-field__label(for="date-text") Дата 
+              span.input-field__text-time и время
+            .input-field__input-with-icon
+              input.input-field__input.input-field__input--active(placeholder="14 декабря, 2017" type="text" name="date-text" id="date-text")
+              button.btn.btn--transparent.input-field__input-btn 
+                svg.btn__icon.input-field__input-icon(viewbox="0 0 14 14")
+                  use(xlink:href="#calendar")
+
+          .input-field
+            .input-field__time
+              .input-field__interval
+                label.input-field__label.input-field__label--time(for="time-start") Начало
+                input.input-field__input.input-field__input--short(placeholder="16:00" style="width: 100%;" type="text" name="time-start" id="time-start")
+
+              .input-field__hyphen
+
+              .input-field__interval
+                label.input-field__label.input-field__label--time(for="time-end") Конец
+                input.input-field__input.input-field__input--short(placeholder="16:30" style="width: 100%;" type="text" name="time-end" id="time-end")
+
+        
+        fieldset.form-meeting__section
+          .input-field
+            label.input-field__label(for="time-end") Участники
+            
+            input.input-field__input.input-field__input-with-icon.input-field__input-with-icon--pressed(placeholder="Например, Тор Одинович" type="text" name="member" id="member")
+          block members
+
+        block rooms
+          section.form-meeting__section
+            p.form-meeting__legend Рекомендованные переговорки
+
+            ul.form-meeting__list
+              li.form-meeting__item
+                .peregovorka
+                  span.peregovorka__time 16:00—16:30
+                  .peregovorka__place
+                    span.peregovorka__name Готем
+                    span.peregovorka__floor 4 этаж
+                  
+              li.form-meeting__item
+                .peregovorka
+                  span.peregovorka__time 16:00—16:30
+                  .peregovorka__place
+                    span.peregovorka__name Поле непаханное
+                    span.peregovorka__floor 4 этаж
+                  
+              li.form-meeting__item
+                .peregovorka
+                  span.peregovorka__time 16:00—16:30
+                  .peregovorka__place
+                    span.peregovorka__name Темная башная
+                    span.peregovorka__floor 4 этаж
+
+        block footer
+          .form-meeting__footer
+            p.form-meeting__paragraph Выберите переговорку
+            .form-meeting__desktop-only
+              button.btn.form-meeting__btn-cancel Отмена
+            .form-meeting__container-btn
+              button.btn.btn--primary.btn--big.form-meeting__create-btn(disabled) Создать встречу

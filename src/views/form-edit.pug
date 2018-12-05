@@ -1,0 +1,50 @@
+extends includes/form.pug
+
+block headline
+  h1.form-meeting__h1.form-meeting__headline Редактирование встречи
+
+block inputTheme
+  input.input-field__input.input-field__input--active(placeholder="О чём будете говорить?" type="text" name="theme" id="theme")
+  button.btn.btn--transparent.input-field__input-btn.input-field__input-btn--active
+    svg.btn__icon.input-field__input-icon(viewbox="0 0 14 14")
+      use(xlink:href="#close")
+
+block members
+  ul.form-meeting__list.form-meeting__list-members
+    li.form-meeting__item
+      .user-label
+        p.user-label__name Лекс Лютор
+        button.btn-icon.btn-icon--user
+          svg.btn-icon__icon.btn-icon__icon
+            use(xlink:href="#close")
+        img.user-label__avatar(src="/img/Chewbacca-icon.png" alt="Лекс Лютор")
+    li.form-meeting__item
+      .user-label
+        p.user-label__name Кларк Кент
+        button.btn-icon.btn-icon--user
+          svg.btn-icon__icon.btn-icon__icon
+            use(xlink:href="#close")
+        img.user-label__avatar(src="/img/Luke-Skywalker-icon.png" alt="Кларк Кент")
+
+block rooms
+  section.form-meeting__section
+    p.form-meeting__legend Ваша переговорка
+    
+    ul.form-meeting__list
+      li.form-meeting__item
+        .peregovorka.peregovorka--selected
+          span.peregovorka__time 16:00—16:30
+          .peregovorka__place
+            span.peregovorka__name Готем
+            span.peregovorka__floor 4 этаж
+          button.btn-icon
+            svg.btn-icon__icon
+              use(xlink:href="#close")
+              
+block footer
+  .form-meeting__footer.form-meeting__footer--static
+    .form-meeting__container-btn
+
+      button.btn.form-meeting__alert-btn Удалить встречу
+      button.btn.form-meeting__edit-btn Отмена
+      button.btn.btn--primary Сохранить

@@ -1,7 +1,6 @@
 .peregovorka {
   position: relative;
 
-  width: 293px;
   padding-top: 14px;
   padding-right: 23px;
   padding-bottom: 14px;
@@ -55,7 +54,6 @@
 
 @media #{$desktop-width} {
   .peregovorka {
-    width: 387px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
