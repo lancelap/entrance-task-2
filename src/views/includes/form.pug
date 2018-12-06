@@ -21,19 +21,22 @@ html(lang="ru")
           h1.form-meeting__h1.form-meeting__headline Новая встреча
         fieldset.form-meeting__section.form-meeting__section--theme
           .input-field
-            label.input-field__label(for="time-end") Тема
-            .input-field__input-with-icon
+            label.input-field__label(for="theme") Тема
+            .control
               block inputTheme
                 input.input-field__input(placeholder="О чём будете говорить?" type="text" name="theme" id="theme")
+                button.btn.btn--transparent.control__btn.control__btn--non-active
+                  svg.control__icon.input-field__input-icon(viewbox="0 0 14 14")
+                    use(xlink:href="#close")
 
         fieldset.form-meeting__section
           .input-field
             label.input-field__label(for="date-text") Дата 
               span.input-field__text-time и время
-            .input-field__input-with-icon
+            .control
               input.input-field__input.input-field__input--active(placeholder="14 декабря, 2017" type="text" name="date-text" id="date-text")
-              button.btn.btn--transparent.input-field__input-btn 
-                svg.btn__icon.input-field__input-icon(viewbox="0 0 14 14")
+              button.btn.btn--transparent.control__btn
+                svg.control__icon.input-field__input-icon.input-field__input-icon--calendar(viewbox="0 0 14 14")
                   use(xlink:href="#calendar")
 
           .input-field
@@ -51,9 +54,9 @@ html(lang="ru")
         
         fieldset.form-meeting__section
           .input-field
-            label.input-field__label(for="time-end") Участники
+            label.input-field__label(for="members") Участники
             
-            input.input-field__input.input-field__input-with-icon.input-field__input-with-icon--pressed(placeholder="Например, Тор Одинович" type="text" name="member" id="member")
+            input.input-field__input.input-field__input-with-icon.input-field__input-with-icon--pressed(placeholder="Например, Тор Одинович" type="text" name="member" id="members")
           block members
 
         block rooms

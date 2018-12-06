@@ -3,34 +3,21 @@
   flex-direction: column;
 }
 
-.input-field__input-with-icon {
-  position: relative;
-
-  display: flex;
-}
-
-.input-field__input-btn {
-  position: absolute;
-  top: 0;
-  right: 2px;
-
-  &--active {
-    display: block;
-  }
-
-  &--non-active {
-    display: none;
-  }
-}
-
 .input-field__input-icon {
   width: 14px;
   height: 14px;
-  padding: 15px;
+  padding: 15px 12px;
+
+  &--calendar {
+    width: 12px;
+    height: 12px;
+    padding: 16px 14px;
+  }
 }
 
 .input-field__input {  
-  flex: 1 0 100%;
+  width: 100%;
+
   padding-top: 11px;
   padding-right: 8px;
   padding-bottom: 12px;
@@ -44,9 +31,11 @@
   border-radius: 4px;
   box-sizing: border-box;
 
+  -webkit-appearance: none;
+
   &--active {
     padding-right: 44px;
-  } 
+  }
 }
 
 .input-field > input::placeholder {
@@ -82,11 +71,6 @@ input:focus.input-field__input {
   outline: none;
 }
 
-.input-field__input-icon:hover > input {
-  border-color: #007DFF!important; 
-  outline: none;
-}
-
 .input-field__list {
   @include reset-list;
   position: absolute;
@@ -101,7 +85,7 @@ input:focus.input-field__input {
   box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
 }
 
-.input-field__list-item  {
+.input-field__list-item {
   position: relative;
 }
 
@@ -151,18 +135,17 @@ input:focus.input-field__input {
   top: 50%;
   left: 17px;
 
-  display: block;
-  width: 24px;  
+  width: 24px;
   height: 24px;
-  margin-top: -11px; 
+  margin-top: -11px;
 
   border-radius: 50%;
 }
 
 .input-field__label {
-  display: block; 
-  margin-bottom: 4px;
-  // margin-top: 16px;
+  display: block;
+  padding-bottom: 4px;
+
   font: bold 13px/16px $font-stack;
   letter-spacing: 0;
   color: #000000;

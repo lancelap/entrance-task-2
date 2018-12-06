@@ -1,0 +1,42 @@
+.control {
+  position: relative;
+}
+
+.control__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &--active {
+    display: block;
+  }
+
+  &--non-active {
+    display: none;
+  }
+}
+
+.control__icon {
+  opacity: .43;
+
+  &:active {
+    opacity: 1;
+  }
+
+  &--light {
+    opacity: 1;
+    fill: #fff;
+  }
+}
+
+@media #{$desktop-width} {
+  .control__icon {
+    &:hover {
+      opacity: 1;
+    }
+
+    &--light:hover {
+      fill: #000;
+    }
+  }
+}

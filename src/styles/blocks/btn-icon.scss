@@ -1,173 +1,173 @@
-.btn-icon {
-  position: absolute;
-  top: 50%;
-  right: 8px;
+// .btn-icon {
+//   position: absolute;
+//   top: 50%;
+//   right: 8px;
 
-  display: block;
-  width: 23px;  
-  height: 32px;
-  margin: 0;
-  margin-top: -16.5px;
-  padding: 0;
+//   display: block;
+//   width: 23px;  
+//   height: 32px;
+//   margin: 0;
+//   margin-top: -16.5px;
+//   padding: 0;
 
-  cursor: pointer;
+//   cursor: pointer;
 
-  background-color: transparent; 
-  border-style: none;
-  border-width: 0;
-  border-radius: 4px;
-  outline: none;
-  fill: #ffffff;
+//   background-color: transparent; 
+//   border-style: none;
+//   border-width: 0;
+//   border-radius: 4px;
+//   outline: none;
+//   fill: #ffffff;
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 1px 8px 0 #002c5c;
-    box-shadow: 0 1px 8px 0 rgba(0,44,92,0.5);
-  }
+//   &:focus {
+//     outline: none;
+//     box-shadow: 0 1px 8px 0 #002c5c;
+//     box-shadow: 0 1px 8px 0 rgba(0,44,92,0.5);
+//   }
   
-  &:active svg {
-    opacity: 1;
-  }
+//   &:active svg {
+//     opacity: 1;
+//   }
 
-  &--circle {
-    position: relative;
-    top: 0;
-    right: 0;
+//   &--circle {
+//     position: relative;
+//     top: 0;
+//     right: 0;
 
-    width: 32px;  
-    height: 32px;
-    margin: 0;
+//     width: 32px;  
+//     height: 32px;
+//     margin: 0;
 
-    background-color: #E9ECEF;
-    border-radius: 50%;
+//     background-color: #E9ECEF;
+//     border-radius: 50%;
     
-    & svg {
-      opacity: 0.43;
-    }
+//     & svg {
+//       opacity: 0.43;
+//     }
 
-    &:active {
-      background-color: #DCDFE1;
-    }
-  }
+//     &:active {
+//       background-color: #DCDFE1;
+//     }
+//   }
 
-  &--arrow {
-    background-color: transparent;
+//   &--arrow {
+//     background-color: transparent;
 
-    &:active {
-      background-color: transparent;
-    }
-  }
+//     &:active {
+//       background-color: transparent;
+//     }
+//   }
 
-  &--edit {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+//   &--edit {
+//     position: absolute;
+//     top: 16px;
+//     right: 16px;
 
-    width: 24px;  
-    height: 24px;
-    margin: 0;
+//     width: 24px;  
+//     height: 24px;
+//     margin: 0;
 
-    background-color: #E9ECEF;
-    border-radius: 50%;
-    fill: #000000;
+//     background-color: #E9ECEF;
+//     border-radius: 50%;
+//     fill: #000000;
 
-    & svg {
-      opacity: 0.43;
-    }
+//     & svg {
+//       opacity: 0.43;
+//     }
 
-    &:active {
-      background-color: #DCDFE1;
-    }
+//     &:active {
+//       background-color: #DCDFE1;
+//     }
 
-    &:active svg {
-      opacity: 1;
-    }
-  }
+//     &:active svg {
+//       opacity: 1;
+//     }
+//   }
 
-  &--user {
-    fill: #AFB4B8;
+//   &--user {
+//     fill: #AFB4B8;
 
-    &:active svg {
-      fill: #000000;
-    }
-  }
+//     &:active svg {
+//       fill: #000000;
+//     }
+//   }
 
-  &--black {
-    fill: #000000;
-  }
+//   &--black {
+//     fill: #000000;
+//   }
 
-  &--grey {
-    fill: #AFB4B8;
-  }
-}
+//   &--grey {
+//     fill: #AFB4B8;
+//   }
+// }
 
-.btn-icon__icon {
-  position: absolute;
-  top: 0;
-  right: 0;
+// .btn-icon__icon {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
 
-  width: 13px;
-  height: 13px;
-  margin-top: 10px;
-  margin-right: 5px;
+//   width: 13px;
+//   height: 13px;
+//   margin-top: 10px;
+//   margin-right: 5px;
 
-  &--black-arrow {
-    transform: rotate(90deg);
-  }
+//   &--black-arrow {
+//     transform: rotate(90deg);
+//   }
 
-  &--edit {
-    top: 50%;
-    right: 50%;
+//   &--edit {
+//     top: 50%;
+//     right: 50%;
 
-    width: 10.5px;
-    height: 10.5px;
-    margin-top: -5.25px;
-    margin-right: -5.25px;
-  }
+//     width: 10.5px;
+//     height: 10.5px;
+//     margin-top: -5.25px;
+//     margin-right: -5.25px;
+//   }
 
-  &--plus {
-    transform: rotate(45deg);
-    fill: #ffffff;
-  }
-}
+//   &--plus {
+//     transform: rotate(45deg);
+//     fill: #ffffff;
+//   }
+// }
 
-@media #{$desktop-width} {
-  .btn-icon {
-    &--user {
-      top: 16px;
-      right: 0;
+// @media #{$desktop-width} {
+//   .btn-icon {
+//     &--user {
+//       top: 16px;
+//       right: 0;
 
-      width: 24px;  
-      height: 24px;
-      fill: #AFB4B8;
+//       width: 24px;  
+//       height: 24px;
+//       fill: #AFB4B8;
   
-     svg {
-        width: 10px;  
-        height: 10px;
-        margin-top: 7px;
-        margin-right: 12px;
-      }
+//      svg {
+//         width: 10px;  
+//         height: 10px;
+//         margin-top: 7px;
+//         margin-right: 12px;
+//       }
   
-      &:active svg {
-        width: 10px;  
-        height: 10px;
-        fill: #000000;
-      }
-    }
-    &--circle {
-      position: relative;
+//       &:active svg {
+//         width: 10px;  
+//         height: 10px;
+//         fill: #000000;
+//       }
+//     }
+//     &--circle {
+//       position: relative;
 
-      width: 24px;  
-      height: 24px;
-    }
-    &:hover svg{
-      opacity: 1;
-      fill: #000000;
-    }
-    &--edit {
-      &:hover{
-        opacity: 1;
-      }
-    }
-  }
-}
+//       width: 24px;  
+//       height: 24px;
+//     }
+//     &:hover svg{
+//       opacity: 1;
+//       fill: #000000;
+//     }
+//     &--edit {
+//       &:hover{
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }

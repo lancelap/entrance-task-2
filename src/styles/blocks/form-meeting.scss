@@ -67,8 +67,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 16px;
-  padding-bottom: 20px;
+
+  padding-bottom: 16px;
 
   background-color: #ffffff;
 }
@@ -91,6 +91,7 @@
 
 .form-meeting__create-btn {
   width: 238px;
+  margin-top: 16px;
 }
 
 .form-meeting__edit-btn {
@@ -116,11 +117,20 @@
   }
 }
 
+.form-meeting__alert-container {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
 .form-meeting__alert-btn {
   width: 100%;
-  
-  border-top: 8px solid #E9ECEF;
-  border-bottom: 8px solid #E9ECEF;
+  padding: 16px 0 20px 0;
+
+  font: normal 15px/18px "HelveticaNeue-Medium",$font-stack;
+  color: #ff3333;
+
+  background-color: #fff;
+  border-radius: 0;
 }
 
 .form-meeting__footer {
@@ -130,7 +140,7 @@
 
   background: transparent;
 
-  &--static {
+  &--mobile-static {
     position: static;
   }
 }
