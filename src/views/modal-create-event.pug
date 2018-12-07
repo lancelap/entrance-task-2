@@ -1,0 +1,14 @@
+extends includes/main.pug
+block modal
+  .modal-content
+    .modal-content__window
+      svg.modal-content__icon
+        use(width="45px" xlink:href="#emoji2")
+      h2.modal-content__message Встреча создана!
+      .modal-content__paragraph
+        .modal-content__data 14 декабря, 15:00—17:00
+        .modal-content__place Ржавый Фред
+          span.modal-content__floor 4 этаж
+      .modal-content__buttons
+        button.btn.btn--few-btn Отмена
+        button.btn.btn--few-btn Удалить
