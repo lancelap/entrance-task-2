@@ -17,78 +17,84 @@ html(lang="ru")
             img(class="peregovorki-logo__img" src="/img/logo.svg", alt="Яндекс Перговорки" width="150" height="22")
 
       form.form-meeting.timetable__form
-        block headline
-          h1.form-meeting__h1.form-meeting__headline Новая встреча
-        fieldset.form-meeting__section.form-meeting__section--theme
-          .input-field
-            label.input-field__label(for="theme") Тема
-            .control
-              block inputTheme
-                input.input-field__input(placeholder="О чём будете говорить?" type="text" name="theme" id="theme")
-                button.btn.btn--transparent.control__btn.control__btn--non-active
-                  svg.control__icon.input-field__input-icon(viewbox="0 0 14 14")
-                    use(xlink:href="#close")
+        .form-meeting__body 
+          block headline
+            .form-meeting__headline 
+              h1.form-meeting__h1 Новая встреча 
+              button.btn.btn--round.form-meeting__close-btn.form-meeting__desktop-visible
+                svg.btn__icon.form-meeting__close-icon(viewbox="0 0 12.5 12.5")
+                  use(xlink:href="#close")
 
-        fieldset.form-meeting__section
-          .input-field
-            label.input-field__label(for="date-text") Дата 
-              span.input-field__text-time и время
-            .control
-              input.input-field__input.input-field__input--active(placeholder="14 декабря, 2017" type="text" name="date-text" id="date-text")
-              button.btn.btn--transparent.control__btn
-                svg.control__icon.input-field__input-icon.input-field__input-icon--calendar(viewbox="0 0 14 14")
-                  use(xlink:href="#calendar")
+          fieldset.form-meeting__section.form-meeting__section--theme
+            .input-field
+              label.input-field__label(for="theme") Тема
+              .input-field__control
+                block inputTheme
+                  input.input-field__input(placeholder="О чём будете говорить?" autocomplete="off" type="text" name="theme" id="theme")
+                  button.btn.btn--transparent.input-field__field-btn
+                    svg.btn__icon.input-field__field-icon(viewbox="0 0 12.5 12.5")
+                      use(xlink:href="#close")
 
-          .input-field
-            .input-field__time
-              .input-field__interval
-                label.input-field__label.input-field__label--time(for="time-start") Начало
-                input.input-field__input.input-field__input--short(placeholder="16:00" style="width: 100%;" type="text" name="time-start" id="time-start")
+          fieldset.form-meeting__section
+            .form-meeting__date
+              .input-field.form-meeting__day
+                label.input-field__label(for="day-text") Дата 
+                  span.input-field__text-time и время
+                .input-field__control
+                  input.input-field__input.input-field__input--with-icon(placeholder="14 декабря, 2017" autocomplete="off" type="text" name="date-text" id="day-text")
+                  button.btn.btn--transparent.input-field__field-btn
+                    svg.btn__icon.input-field__field-icon.input-field__field-icon--calendar(viewbox="0 0 14 14")
+                      use(xlink:href="#calendar")
 
-              .input-field__hyphen
+              .input-field.form-meeting__time
+                .input-field__time
+                  .input-field__interval
+                    label.input-field__label.input-field__label--time(for="time-start") Начало
+                    input.input-field__input(placeholder="16:00" style="width: 100%;" autocomplete="off" type="text" name="time-start" id="time-start")
 
-              .input-field__interval
-                label.input-field__label.input-field__label--time(for="time-end") Конец
-                input.input-field__input.input-field__input--short(placeholder="16:30" style="width: 100%;" type="text" name="time-end" id="time-end")
+                  .input-field__hyphen
 
-        
-        fieldset.form-meeting__section
-          .input-field
-            label.input-field__label(for="members") Участники
-            
-            input.input-field__input.input-field__input-with-icon.input-field__input-with-icon--pressed(placeholder="Например, Тор Одинович" type="text" name="member" id="members")
-          block members
+                  .input-field__interval
+                    label.input-field__label.input-field__label--time(for="time-end") Конец
+                    input.input-field__input(placeholder="16:30" style="width: 100%;" autocomplete="off" type="text" name="time-end" id="time-end")
+          
+          fieldset.form-meeting__section
+            .input-field
+              label.input-field__label(for="members") Участники
+              .input-field__control
+                input.input-field__input.input-field__input-with-icon.input-field__input-with-icon--pressed(placeholder="Например, Тор Одинович" autocomplete="off" type="text" name="members" id="members")
+                block list-members
+            block members
 
-        block rooms
-          section.form-meeting__section
-            p.form-meeting__legend Рекомендованные переговорки
+          block rooms
+            section.form-meeting__section
+              p.form-meeting__legend Рекомендованные переговорки
 
-            ul.form-meeting__list
-              li.form-meeting__item
-                .peregovorka
-                  span.peregovorka__time 16:00—16:30
-                  .peregovorka__place
-                    span.peregovorka__name Готем
-                    span.peregovorka__floor 4 этаж
-                  
-              li.form-meeting__item
-                .peregovorka
-                  span.peregovorka__time 16:00—16:30
-                  .peregovorka__place
-                    span.peregovorka__name Поле непаханное
-                    span.peregovorka__floor 4 этаж
-                  
-              li.form-meeting__item
-                .peregovorka
-                  span.peregovorka__time 16:00—16:30
-                  .peregovorka__place
-                    span.peregovorka__name Темная башная
-                    span.peregovorka__floor 4 этаж
+              ul.form-meeting__list
+                li.form-meeting__item
+                  .peregovorka
+                    span.peregovorka__time 16:00—16:30
+                    .peregovorka__place
+                      span.peregovorka__name Готем
+                      span.peregovorka__floor 4 этаж
+                    
+                li.form-meeting__item
+                  .peregovorka
+                    span.peregovorka__time 16:00—16:30
+                    .peregovorka__place
+                      span.peregovorka__name Поле непаханное
+                      span.peregovorka__floor 4 этаж
+                    
+                li.form-meeting__item
+                  .peregovorka
+                    span.peregovorka__time 16:00—16:30
+                    .peregovorka__place
+                      span.peregovorka__name Темная башная
+                      span.peregovorka__floor 4 этаж
 
         block footer
           .form-meeting__footer
             p.form-meeting__paragraph Выберите переговорку
-            .form-meeting__desktop-only
-              button.btn.form-meeting__btn-cancel Отмена
             .form-meeting__container-btn
-              button.btn.btn--primary.btn--big.form-meeting__create-btn(disabled) Создать встречу
+              button.btn.form-meeting__btn.form-meeting__desktop-visible Отмена
+              button.btn.btn--primary.form-meeting__create-btn Создать встречу

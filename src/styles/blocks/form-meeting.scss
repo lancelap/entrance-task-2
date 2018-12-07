@@ -1,8 +1,11 @@
 .form-meeting {
-  position: relative;
-
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
+  flex: 1;
+}
+
+.form-meeting__body {
+  flex: 1;
 }
 
 .form-meeting__button-close-form {
@@ -16,10 +19,11 @@
 }
 
 .form-meeting__h1 {
+  margin: 0;
   padding-right: 16px;
   padding-left: 16px;
 
-  font: bold 20px/24px "HelveticaNeue-Bold;",$font-stack;
+  font: bold 20px/24px $font-stack;
   letter-spacing: 0;
   color: #000000;
 }
@@ -40,10 +44,6 @@
     
     border: none;
   }
-
-  &--no-pad {
-    padding: 0;
-  }
 }
 
 .form-meeting__legend {
@@ -54,6 +54,10 @@
   font: bold 13px/16px $font-stack;
   letter-spacing: 0;
   color: #000000;
+}
+
+.form-meeting__day {
+  margin-bottom: 8px;
 }
 
 .form-meeting__offset {
@@ -85,16 +89,7 @@
   background: rgba(0,16,33,0.74);
 }
 
-.form-meeting__desktop-only {
-  display: none;
-}
-
-.form-meeting__create-btn {
-  width: 238px;
-  margin-top: 16px;
-}
-
-.form-meeting__edit-btn {
+.form-meeting__btn {
   margin-right: 16px;
 }
 
@@ -120,17 +115,8 @@
 .form-meeting__alert-container {
   width: 100%;
   margin-bottom: 16px;
-}
 
-.form-meeting__alert-btn {
-  width: 100%;
-  padding: 16px 0 20px 0;
-
-  font: normal 15px/18px "HelveticaNeue-Medium",$font-stack;
-  color: #ff3333;
-
-  background-color: #fff;
-  border-radius: 0;
+  border-bottom: 8px solid #E9ECEF;
 }
 
 .form-meeting__footer {
@@ -145,67 +131,137 @@
   }
 }
 
+.form-meeting__desktop-visible {
+  display: none;
+}
+
+@media #{$mobile-width-only} {
+  .form-meeting__alert-btn {
+    width: 100%;
+    padding: 16px 0 20px 0;
+
+    color: #ff3333;
+  
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+  .form-meeting__primary-btn {
+    color: #fff;
+
+    background-color: #007DFF;
+
+    &:active {
+      background-color: #007DFF;
+    }
+  }
+
+  .form-meeting__create-btn {
+    width: 238px;
+    margin-top: 16px;
+  }
+}
+
 @media #{$desktop-width} {
-  .form-meeting {
+  .form-meeting__body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 31px;
-    padding-bottom: 76px;
-  }
-  .form-meeting__headline {
-    margin-bottom: 20px;
-    padding-left: 0;
-  }
-  .form-meeting {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-content: flex-start;
     width: 872px;
     margin: 0 auto;
   }
+
+  .form-meeting__headline {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 20px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .form-meeting__h1 {
+    flex: 1;
+    padding: 0;
+  }
+
+  .form-meeting__close-btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .form-meeting__close-icon {
+    width: 10px;
+    height: 10px;
+  }
+
   .form-meeting__section {
     flex-basis: 420px;
     margin-top: 0;
     margin-bottom: 24px;
     padding: 0;
+
+    border: none;
   }
-  .form-meeting__headline {
-    flex-basis: 100%;
-  }
-  .form-meeting__offset {
-    display: none;  
-  }
-  .form-meeting__btn-container {
+
+  .form-meeting__date {
     display: flex;
   }
-  .form-meeting__btn-container,
-  .form-meeting__create-meeting-container {
+
+  .form-meeting__day {
+    flex: 1 0 238px;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+
+  .input-field__time {
+    flex: 1 0;
+    width: 166px;
+  }
+
+  .form-meeting__list-members {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 12px;
+  }
+
+  .form-meeting__item-members {
+    margin-right: 8px;
+  }
+
+  .form-meeting__footer {
     position: fixed;
+    right: 0;
     bottom: 0;
     left: 0;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    background: #FFFFFF;
-    box-shadow: 0 -1px 0 0 #E9ECEF;
+    border-top: 1px solid #e9ecef; 
   }
-  .form-meeting__legend {
-    width: 420px;
-  }  
-  .form-meeting__fixed-phrase {
+
+  .form-meeting__container-btn {
+    padding-top: 20px;
+  }
+
+  .form-meeting__alert-container {
+    width: auto;
+    margin: 0;
+    margin-right: 16px;
+    
+    border-bottom: none;
+  }
+
+  .form-meeting__btn {
+    order: -1;
+  }
+
+  .form-meeting__paragraph {
     display: none;
   }
-  .form-meeting__button-close-form {
-    position: absolute;
-    top: 16px;
-    right: -16px;
 
+  .form-meeting__desktop-visible {
     display: block;
-  }  
+  }
 }

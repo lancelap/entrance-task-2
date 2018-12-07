@@ -4,6 +4,10 @@
   overflow: auto;
 }
 
+.timetable__form {
+  flex: 1;
+}
+
 .timetable__logo {
   position: sticky;
   top: 0;
@@ -70,12 +74,12 @@
   }
 
   .timetable__content {
-    min-height: calc(100vh - 117px);
+    min-height: calc(100vh - 118px);
   }
 
   .timetable__hour {
     &::before {
-      min-height: calc(100vh - 117px);
+      min-height: calc(100vh - 118px);
     }
   }
 

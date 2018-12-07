@@ -1,0 +1,67 @@
+.list-users__list {
+  @include reset-list;
+  overflow-y: scroll;
+
+  border-radius: 4px;
+  box-shadow: 0 1px 8px 0 #002c5c;
+  box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+}
+
+.list-users__list-item {
+  position: relative;
+}
+
+.list-users__list-item a {
+  display: block;
+  padding-top: 10px;
+  padding-right: 9px;
+  padding-bottom: 9px;
+  padding-left: 48px;
+
+  font: normal 13px/15px $font-stack;
+  letter-spacing: 0;
+  color: #000000;
+  text-decoration: none;
+
+  background-color: #ffffff;
+
+  &:hover {
+    font-weight: bold;
+
+    background-color: #F6F7F9;
+  }
+}
+
+.list-users__name {
+  color: #000000;
+
+  &::after {
+    content: " ·";
+  }
+}
+
+.list-users__floor {
+  color: #858E98;
+}
+
+.list-users__list-item:first-child a {
+  border-radius: 4px 4px 0 0;
+}
+
+.list-users__list-item:last-child a {
+  border-radius: 0 0 4px 4px;
+}
+
+.list-users__item-avatar {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+
+  width: 24px;
+  height: 24px;
+  margin-top: -11px;
+
+  border-radius: 50%;
+}
+
+
