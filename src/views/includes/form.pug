@@ -99,7 +99,9 @@ html(lang="ru")
           .form-meeting__footer
             p.form-meeting__paragraph Выберите переговорку
             .form-meeting__container-btn
-              button.btn.form-meeting__btn.form-meeting__desktop-visible(type="button") Отмена
+              .buttons-group
+                .buttons-group__mr
+                  button.btn.form-meeting__btn.form-meeting__desktop-visible(type="button") Отмена
               button.btn.btn--primary.form-meeting__create-btn(type="submit") Создать встречу
 
     block modal

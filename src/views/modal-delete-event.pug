@@ -5,8 +5,10 @@ block modal
       svg.modal-content__icon
         use(xlink:href="#emoji1")
         
-      h2.modal-content__alert Встреча будет удалена безвозвратно
+      h2.modal-content__alert 
+        span.modal-content__first-rowВстреча будет 
+        span.modal-content__second-row удалена безвозвратно
       .modal-content__buttons
         .buttons-group
           button.btn.buttons-group__mr(type="button") Отмена
-          button.btn(type="button") Удалить
+        button.btn(type="button") Удалить
