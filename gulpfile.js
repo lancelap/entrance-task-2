@@ -13,6 +13,7 @@ const svgmin = require('gulp-svgmin');
 const pug = require('gulp-pug');
 const del = require('del');
 const path = require('path');
+const ghPages = require('gulp-gh-pages');
 
 sass.compiler = require('node-sass');
 
@@ -121,7 +122,8 @@ gulp.task('symbols', function() {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('./build/**/*');
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('clean', () => {

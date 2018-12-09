@@ -7,6 +7,7 @@
     "build": "gulp build",
     "start": "gulp default"
   },
+  "homepage": "https://github.com/lancelap/entrance-task-2",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-csso": "^3.0.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
