@@ -21,13 +21,14 @@
 Если переговорка не выбрана, отображается список доступных комнат.
 Если переговорка выбрана, то вместо списка отображается только она (с возможностью отменить выбор).
 
-Новая встреча состояния form-new-states.html
-Редактирование встречи form-edit.html
-Новая встреча form.html
-Главная календарь calendar.html
-Встреча создана modal-create-event.html
-Встреча будет удалена modal-delete-event.html
-Главная /
-Главная c тултипом (смотреть с шириной экрана 1280px) desktop-tooltip.html
-Главная c тултипом (смотреть с шириной экрана 360px)  №2 mobile-tooltip.html
-Главная со скроллом compact.html
+#### Страницы
+- [Главная](https://lancelap.github.io/entrance-task-2)
+- [Новая встреча состояния](https://lancelap.github.io/entrance-task-2/form-new-states.html)
+- [Редактирование встречи](https://lancelap.github.io/entrance-task-2/form-edit.html)
+- [Новая встреча](https://lancelap.github.io/entrance-task-2/form.html)
+- [Главная календарь](https://lancelap.github.io/entrance-task-2/calendar.html)
+- [Встреча создана](https://lancelap.github.io/entrance-task-2/modal-create-event.html)
+- [Встреча будет удалена](https://lancelap.github.io/entrance-task-2/modal-delete-event.html)
+- [Главная c тултипом (смотреть с шириной экрана 1280px)](https://lancelap.github.io/entrance-task-2/desktop-tooltip.html)
+- [Главная c тултипом №2 (смотреть с шириной экрана 360px)](https://lancelap.github.io/entrance-task-2/mobile-tooltip.html)
+- [Главная со скроллом](https://lancelap.github.io/entrance-task-2/compact.html)
