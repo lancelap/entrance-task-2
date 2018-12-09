@@ -47,3 +47,20 @@ block list-members
         img.list-users__item-avatar(src="/img/Chewbacca-icon.png" alt="")
         span.list-users__name Кларк Кент
         span.list-users__floor  2 этаж
+        
+block rooms
+  .form-meeting__section
+    p.form-meeting__legend Ваша переговорка
+    
+    ul.form-meeting__list
+      li.form-meeting__item
+        .peregovorka.peregovorka--selected.peregovorka__control
+          span.peregovorka__time 16:00—16:30
+          .peregovorka__place
+            span.peregovorka__name Готем
+            span.peregovorka__floor 4 этаж
+          button.btn.btn--transparent.peregovorka__field-btn(type="button")
+            span.visually-hidden Удалить
+            svg.btn__icon.btn__icon--light.peregovorka__field-icon(viewbox="0 0 12.5 12.5")
+              use(xlink:href="#close")
+              
