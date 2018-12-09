@@ -1,10 +1,10 @@
 @import "normalize.scss";
 @import "variables.scss";
 @import "mixins.scss";
+@import "blocks/btn.scss";
 @import "blocks/body.scss";
 @import "blocks/clock.scss";
 @import "blocks/list-slot.scss";
-@import "blocks/btn.scss";
 @import "blocks/room-elem.scss";
 @import "blocks/user-label.scss";
 @import "blocks/peregovorka.scss";
@@ -19,3 +19,4 @@
 @import "blocks/content.scss";
 @import "blocks/date-picker.scss";
 @import "blocks/list-users.scss";
+@import "blocks/buttons-group.scss";

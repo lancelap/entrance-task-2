@@ -30,7 +30,7 @@ html(lang="ru")
               label.input-field__label(for="theme") Тема
               .input-field__control
                 block inputTheme
-                  input.input-field__input(placeholder="О чём будете говорить?" autocomplete="off" type="text" name="theme" id="theme")
+                  input.input-field__input.input-field__input--with-icon(placeholder="О чём будете говорить?" autocomplete="off" type="text" name="theme" id="theme")
                   button.btn.btn--transparent.input-field__field-btn
                     svg.btn__icon.input-field__field-icon(viewbox="0 0 12.5 12.5")
                       use(xlink:href="#close")
@@ -62,7 +62,7 @@ html(lang="ru")
             .input-field
               label.input-field__label(for="members") Участники
               .input-field__control
-                input.input-field__input.input-field__input-with-icon.input-field__input-with-icon--pressed(placeholder="Например, Тор Одинович" autocomplete="off" type="text" name="members" id="members")
+                input.input-field__input(placeholder="Например, Тор Одинович" autocomplete="off" type="text" name="members" id="members")
                 block list-members
             block members
 

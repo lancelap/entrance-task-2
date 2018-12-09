@@ -99,11 +99,11 @@ input:focus.input-field__input {
   }
 
   &--arrow-up {
-    width: 22px;
-    height: 22px;
+    width: 16px;
+    height: 16px;
 
     transform: rotate(90deg);
-    transform-origin: 30% 10%;
+    transform-origin: center top;
   }
 }
 
@@ -167,8 +167,8 @@ input:focus.input-field__input {
     }
 
     &--arrow-up {
-      width: 22px;
-      height: 22px;
+      width: 14px;
+      height: 14px;
     }
   }
 }
