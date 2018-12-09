@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Яндекс Переговорки</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="body">
+    <div style="display: none"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="arrow" viewBox="0 0 9 14"><g fill="none" fill-rule="evenodd"><path d="M-6-5h24v24H-6z"/><path stroke="#000" stroke-width="2" stroke-linecap="round" d="M7.657 12.314L2 6.657 7.657 1h0"/></g></symbol><symbol id="calendar" viewBox="0 0 14 14"><path d="M1 5v8h12V5H1zm11-3h2v12H0V2h2V0h2v2h6V0h2v2zM2 9v2h2V9H2zm0-3v2h2V6H2zm3 0v2h2V6H5z"/></symbol><symbol id="close" viewBox="0 0 13 13"><path d="M6.364 4.95L2.121.707A1 1 0 0 0 .707 2.121L4.95 6.364.707 10.607a1 1 0 1 0 1.414 1.414l4.243-4.243 4.243 4.243a1 1 0 0 0 1.414-1.414L7.778 6.364l4.243-4.243A1 1 0 1 0 10.607.707L6.364 4.95z"/></symbol><symbol id="edit" viewBox="0 0 12 12"><path d="M11.805 2.695a.664.664 0 0 0 0-.94l-1.56-1.56a.664.664 0 0 0-.94 0L8.08 1.415l2.5 2.5 1.226-1.22zM0 9.5V12h2.5l7.372-7.379-2.5-2.5L0 9.501z"/></symbol><symbol id="emoji1" viewBox="0 0 90 90"><text font-family="AppleColorEmoji, Apple Color Emoji" font-size="80" transform="translate(-224 -227)"><tspan x="225" y="306">&#x1F645;&#x1F3FB;</tspan></text></symbol><symbol id="emoji2" viewBox="0 0 90 90"><text font-family="AppleColorEmoji, Apple Color Emoji" font-size="70" transform="translate(-94 -227)"><tspan x="103" y="305">&#x1F389;</tspan></text></symbol></svg></div>
+    <div class="timetable">
+      <header class="timetable__logo">
+        <div class="peregovorki-logo"><a class="peregovorki-logo__link" href="/"><img class="peregovorki-logo__img" src="/img/logo.svg" alt="Яндекс Перговорки" width="150" height="22"></a>
+          <button class="btn btn--primary peregovorki-logo__btn-create" type="button">Создать встречу</button>
+        </div>
+      </header>
+      <aside class="timetable__calendar">
+        <div class="calendar">
+          <button class="btn btn--round calendar__button" type="button"><span class="visually-hidden">Перейти к предыдущему дню</span>
+            <svg class="btn__icon calendar__button-icon" viewbox="0 0 9 14">
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </button>
+          <div class="calendar__data">14 дек<span class="calendar__today">Сегодня</span></div>
+          <button class="btn btn--round calendar__button calendar__button--next" type="button"><span class="visually-hidden">Перейти к следующему дню</span>
+            <svg class="btn__icon calendar__button-icon" viewbox="0 0 9 14">
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </aside>
+      <aside class="timetable__clock">
+        <div class="clock">
+          <ul class="clock__scale timetable__scale">
+            <li class="clock__item-hour timetable__hour"><span>8  </span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>9      </span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>10</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>11</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>12</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>13</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>14</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>15</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>16</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>17</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>18</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>19</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>20</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>21</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>22</span></li>
+            <li class="clock__item-hour clock__item-hour--next timetable__hour"><span>23</span></li>
+            <li class="clock__item-hour clock__item-hour--current timetable__current-hour" style="margin-left: calc(0.10416% * 35)"><span>8:05</span></li>
+          </ul>
+        </div>
+      </aside>
+      <main class="content timetable__content">
+        <div class="list-floors content__list-floors">
+          <p class="list-floors__floor-number">7 этаж</p>
+          <ul class="list-floors__floors">
+            <li class="list-floors__room"> 
+              <div class="room-elem room-elem--disabled">
+                <p class="room-elem__name">Ржавый Фред</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+            <li class="list-floors__room"> 
+              <div class="room-elem">
+                <p class="room-elem__name">Прачечная</p>
+                <p class="room-elem__capacity">до 10 человек</p>
+              </div>
+            </li>
+            <li class="list-floors__room"> 
+              <div class="room-elem">
+                <p class="room-elem__name">Жёлтый дом</p>
+                <p class="room-elem__capacity">до 10 человек</p>
+              </div>
+            </li>
+            <li class="list-floors__room"> 
+              <div class="room-elem room-elem--disabled">
+                <p class="room-elem__name">Оранжевый тюльпан</p>
+                <p class="room-elem__capacity">до 10 человек</p>
+              </div>
+            </li>
+          </ul>
+          <p class="list-floors__floor-number">6 этаж</p>
+          <ul class="list-floors__floors">
+            <li class="list-floors__room"> 
+              <div class="room-elem">
+                <p class="room-elem__name">Джокер </p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+            <li class="list-floors__room"> 
+              <div class="room-elem">
+                <p class="room-elem__name">Мариванна </p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+            <li class="list-floors__room"> 
+              <div class="room-elem">
+                <p class="room-elem__name">Тонкий Боб</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+            <li class="list-floors__room"> 
+              <div class="room-elem">
+                <p class="room-elem__name">Чёрная вдова</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+            <li class="list-floors__room"> 
+              <div class="room-elem">
+                <p class="room-elem__name">Белорусский ликёр</p>
+                <p class="room-elem__capacity">3—6 человек</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ul class="list-slot content__list-slot">
+          <li class="list-slot__floor content__floor"> 
+            <div class="list-slot__room">
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot" style="flex-grow: 30"></div>
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot" style="flex-grow: 99"></div>
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 861"></div>
+            </div>
+            <div class="list-slot__room">
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot"></div>
+            </div>
+            <div class="list-slot__room">
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot" style="flex-grow: 238"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 57"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 120"></div>
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot" style="flex-grow: 79"></div>
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot" style="flex-grow: 131"></div>
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot" style="flex-grow: 431"></div>
+            </div>
+            <div class="list-slot__room">
+              <div class="list-slot__slot list-slot__slot--no-vacancy list-slot__slot content__slot"></div>
+            </div>
+          </li>
+          <li class="list-slot__floor content__floor"> 
+            <div class="list-slot__room">
+              <div class="list-slot__slot content__slot" style="flex-grow: 33"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 66"></div>
+              <div class="list-slot__slot content__slot" style="flex-grow: 33"></div>
+            </div>
+            <div class="list-slot__room">
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot"></div>
+            </div>
+            <div class="list-slot__room">
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot"></div>
+            </div>
+            <div class="list-slot__room">
+              <div class="list-slot__slot list-slot__slot--no-vacancy content__slot"></div>
+            </div>
+            <div class="list-slot__room">
+              <div class="list-slot__slot content__slot"></div>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <div class="modal-content">
+      <div class="modal-content__window">
+        <svg class="modal-content__icon">
+          <use width="45px" xlink:href="#emoji2"></use>
+        </svg>
+        <h2 class="modal-content__message">Встреча создана!</h2>
+        <div class="modal-content__paragraph">
+          <div class="modal-content__data">14 декабря, 15:00—17:00</div>
+          <div class="modal-content__place">Ржавый Фред<span class="modal-content__floor">4 этаж</span></div>
+        </div>
+        <div class="modal-content__buttons">
+          <button class="btn btn--primary" type="button">Хорошо</button>
+        </div>
+      </div>
+    </div>
+    <script>
+       const timeTable = document.getElementsByClassName('timetable')[0];
+const compactRooms = document.getElementsByClassName('room-elem');
+const roomsOuter = document.getElementsByClassName('list-floors__room');
+const listRooms = document.getElementsByClassName('list-floors content__list-floors')[0];
+
+timeTable.onscroll = function () {
+
+  if (timeTable.scrollLeft >= 169) {
+
+    for (let index = 0; index < compactRooms.length; index++) {
+      const element = compactRooms[index];
+      element.classList.add('room-elem--compact');
+    }
+    
+    for (let index = 0; index < roomsOuter.length; index++) {
+      const element = roomsOuter[index];
+      element.classList.add('list-floors__room--compact');
+    }
+
+    listRooms.classList.add('content__list-floors--compact');
+
+  }
+
+  if (timeTable.scrollLeft < 169) {
+
+    for (let index = 0; index < compactRooms.length; index++) {
+      const element = compactRooms[index];
+      element.classList.remove('room-elem--compact');
+    }
+
+    for (let index = 0; index < roomsOuter.length; index++) {
+      const element = roomsOuter[index];
+      element.classList.remove('list-floors__room--compact');
+    }
+
+    listRooms.classList.remove('content__list-floors--compact');
+  }
+}
+
+    </script>
+  </body>
+</html>

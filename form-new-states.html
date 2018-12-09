@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Яндекс Переговорки</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="body">
+    <div style="display: none"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="arrow" viewBox="0 0 9 14"><g fill="none" fill-rule="evenodd"><path d="M-6-5h24v24H-6z"/><path stroke="#000" stroke-width="2" stroke-linecap="round" d="M7.657 12.314L2 6.657 7.657 1h0"/></g></symbol><symbol id="calendar" viewBox="0 0 14 14"><path d="M1 5v8h12V5H1zm11-3h2v12H0V2h2V0h2v2h6V0h2v2zM2 9v2h2V9H2zm0-3v2h2V6H2zm3 0v2h2V6H5z"/></symbol><symbol id="close" viewBox="0 0 13 13"><path d="M6.364 4.95L2.121.707A1 1 0 0 0 .707 2.121L4.95 6.364.707 10.607a1 1 0 1 0 1.414 1.414l4.243-4.243 4.243 4.243a1 1 0 0 0 1.414-1.414L7.778 6.364l4.243-4.243A1 1 0 1 0 10.607.707L6.364 4.95z"/></symbol><symbol id="edit" viewBox="0 0 12 12"><path d="M11.805 2.695a.664.664 0 0 0 0-.94l-1.56-1.56a.664.664 0 0 0-.94 0L8.08 1.415l2.5 2.5 1.226-1.22zM0 9.5V12h2.5l7.372-7.379-2.5-2.5L0 9.501z"/></symbol><symbol id="emoji1" viewBox="0 0 90 90"><text font-family="AppleColorEmoji, Apple Color Emoji" font-size="80" transform="translate(-224 -227)"><tspan x="225" y="306">&#x1F645;&#x1F3FB;</tspan></text></symbol><symbol id="emoji2" viewBox="0 0 90 90"><text font-family="AppleColorEmoji, Apple Color Emoji" font-size="70" transform="translate(-94 -227)"><tspan x="103" y="305">&#x1F389;</tspan></text></symbol></svg></div>
+    <div class="timetable">
+      <header class="timetable__logo">
+        <div class="peregovorki-logo"><a class="peregovorki-logo__link" href="/"><img class="peregovorki-logo__img" src="/img/logo.svg" alt="Яндекс Перговорки" width="150" height="22"></a></div>
+      </header>
+      <form class="form-meeting timetable__form">
+        <div class="form-meeting__body"> 
+          <div class="form-meeting__headline"> 
+            <h1 class="form-meeting__h1">Новая встреча </h1>
+            <button class="btn btn--round form-meeting__close-btn form-meeting__desktop-visible" type="button"><span class="visually-hidden">Закрыть форму</span>
+              <svg class="btn__icon form-meeting__close-icon" viewbox="0 0 12.5 12.5">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+          </div>
+          <fieldset class="form-meeting__section form-meeting__section--theme">
+            <div class="input-field">
+              <label class="input-field__label" for="theme">Тема</label>
+              <div class="input-field__control">
+                <input class="input-field__input input-field__input--with-icon" placeholder="О чём будете говорить?" autocomplete="off" type="text" name="theme" id="theme">
+                <button class="btn btn--transparent input-field__field-btn" type="button"><span class="visually-hidden">Очистить поле</span>
+                  <svg class="btn__icon input-field__field-icon" viewbox="0 0 12.5 12.5">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-meeting__section">
+            <div class="form-meeting__date">
+              <div class="input-field form-meeting__day">
+                <label class="input-field__label" for="day-text">Дата <span class="input-field__text-time">и время</span></label>
+                <div class="input-field__control">
+                  <input class="input-field__input input-field__input--with-icon" placeholder="14 декабря, 2017" autocomplete="off" type="text" name="date-text" id="day-text">
+                  <button class="btn btn--transparent input-field__field-btn" type="button"><span class="visually-hidden">Открыть календарь</span>
+                    <svg class="btn__icon input-field__field-icon input-field__field-icon--calendar" viewbox="0 0 14 14">
+                      <use xlink:href="#calendar"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="input-field form-meeting__time">
+                <div class="input-field__time">
+                  <div class="input-field__interval">
+                    <label class="input-field__label input-field__label--time" for="time-start">Начало</label>
+                    <input class="input-field__input" placeholder="16:00" style="width: 100%;" autocomplete="off" type="text" name="time-start" id="time-start">
+                  </div>
+                  <div class="input-field__hyphen"></div>
+                  <div class="input-field__interval">
+                    <label class="input-field__label input-field__label--time" for="time-end">Конец</label>
+                    <input class="input-field__input" placeholder="16:30" style="width: 100%;" autocomplete="off" type="text" name="time-end" id="time-end">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-meeting__section">
+            <div class="input-field">
+              <label class="input-field__label" for="members">Участники</label>
+              <div class="input-field__control">
+                <input class="input-field__input" placeholder="Например, Тор Одинович" autocomplete="off" type="text" name="members" id="members">
+                <button class="btn btn--transparent input-field__field-btn" type="button"><span class="visually-hidden">Удалить участника</span>
+                  <svg class="btn__icon input-field__field-icon input-field__field-icon--arrow-up" viewbox="0 0 24 24">
+                    <use xlink:href="#arrow"></use>
+                  </svg>
+                </button>
+                <ul class="list-users__list input-field__users-list">
+                  <li class="list-users__list-item"><a href="#"><img class="list-users__item-avatar" src="/img/Chewbacca-icon.png" alt=""><span class="list-users__name">Лекс Лютер</span><span class="list-users__floor"> 7 этаж</span></a></li>
+                  <li class="list-users__list-item"> <a href="#"><img class="list-users__item-avatar" src="/img/Chewbacca-icon.png" alt=""><span class="list-users__name">Томас Андерсон </span><span class="list-users__floor"> 2 этаж</span></a></li>
+                  <li class="list-users__list-item"> <a href="#"><img class="list-users__item-avatar" src="/img/Chewbacca-icon.png" alt=""><span class="list-users__name">Дарт Вейдер </span><span class="list-users__floor"> 1 этаж</span></a></li>
+                  <li class="list-users__list-item"> <a href="#"><img class="list-users__item-avatar" src="/img/Chewbacca-icon.png" alt=""><span class="list-users__name">Кларк Кент</span><span class="list-users__floor"> 2 этаж</span></a></li>
+                  <li class="list-users__list-item"> <a href="#"><img class="list-users__item-avatar" src="/img/Chewbacca-icon.png" alt=""><span class="list-users__name">Кларк Кент</span><span class="list-users__floor"> 2 этаж</span></a></li>
+                  <li class="list-users__list-item"> <a href="#"><img class="list-users__item-avatar" src="/img/Chewbacca-icon.png" alt=""><span class="list-users__name">Кларк Кент</span><span class="list-users__floor"> 2 этаж</span></a></li>
+                  <li class="list-users__list-item"> <a href="#"><img class="list-users__item-avatar" src="/img/Chewbacca-icon.png" alt=""><span class="list-users__name">Кларк Кент</span><span class="list-users__floor"> 2 этаж</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-meeting__section">
+            <p class="form-meeting__legend">Ваша переговорка</p>
+            <ul class="form-meeting__list">
+              <li class="form-meeting__item">
+                <div class="peregovorka peregovorka--selected peregovorka__control"><span class="peregovorka__time">16:00—16:30</span>
+                  <div class="peregovorka__place"><span class="peregovorka__name">Готем</span><span class="peregovorka__floor">4 этаж</span></div>
+                  <button class="btn btn--transparent peregovorka__field-btn" type="button"><span class="visually-hidden">Удалить</span>
+                    <svg class="btn__icon btn__icon--light peregovorka__field-icon" viewbox="0 0 12.5 12.5">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-meeting__footer">
+          <p class="form-meeting__paragraph">Выберите переговорку</p>
+          <div class="form-meeting__container-btn">
+            <div class="buttons-group">
+              <div class="buttons-group__mr">
+                <button class="btn form-meeting__btn form-meeting__desktop-visible" type="button">Отмена</button>
+              </div>
+            </div>
+            <button class="btn btn--primary form-meeting__create-btn" type="submit">Создать встречу</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
