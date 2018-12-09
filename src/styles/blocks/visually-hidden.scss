@@ -1,0 +1,17 @@
+.visually-hidden {
+  // Move the text out of the flow of the container.
+  position: absolute;
+
+  // Reduce its height and width to just one pixel.
+  width: 1px;
+  height: 1px;
+
+  // Hide any overflowing elements or text.
+  overflow: hidden;
+
+  // Clip the box to zero pixels.
+  clip: rect(0, 0, 0, 0);
+
+  // Text won't wrap to a second line.
+  white-space: nowrap;
+}
