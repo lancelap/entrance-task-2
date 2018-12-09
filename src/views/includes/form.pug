@@ -21,7 +21,7 @@ html(lang="ru")
           block headline
             .form-meeting__headline 
               h1.form-meeting__h1 Новая встреча 
-              button.btn.btn--round.form-meeting__close-btn.form-meeting__desktop-visible
+              button.btn.btn--round.form-meeting__close-btn.form-meeting__desktop-visible(type="button")
                 svg.btn__icon.form-meeting__close-icon(viewbox="0 0 12.5 12.5")
                   use(xlink:href="#close")
 
@@ -31,7 +31,7 @@ html(lang="ru")
               .input-field__control
                 block inputTheme
                   input.input-field__input.input-field__input--with-icon(placeholder="О чём будете говорить?" autocomplete="off" type="text" name="theme" id="theme")
-                  button.btn.btn--transparent.input-field__field-btn
+                  button.btn.btn--transparent.input-field__field-btn(type="button")
                     svg.btn__icon.input-field__field-icon(viewbox="0 0 12.5 12.5")
                       use(xlink:href="#close")
 
@@ -42,7 +42,7 @@ html(lang="ru")
                   span.input-field__text-time и время
                 .input-field__control
                   input.input-field__input.input-field__input--with-icon(placeholder="14 декабря, 2017" autocomplete="off" type="text" name="date-text" id="day-text")
-                  button.btn.btn--transparent.input-field__field-btn
+                  button.btn.btn--transparent.input-field__field-btn(type="button")
                     svg.btn__icon.input-field__field-icon.input-field__field-icon--calendar(viewbox="0 0 14 14")
                       use(xlink:href="#calendar")
 
@@ -96,7 +96,7 @@ html(lang="ru")
           .form-meeting__footer
             p.form-meeting__paragraph Выберите переговорку
             .form-meeting__container-btn
-              button.btn.form-meeting__btn.form-meeting__desktop-visible Отмена
-              button.btn.btn--primary.form-meeting__create-btn Создать встречу
+              button.btn.form-meeting__btn.form-meeting__desktop-visible(type="button") Отмена
+              button.btn.btn--primary.form-meeting__create-btn(type="submit") Создать встречу
 
     block modal
