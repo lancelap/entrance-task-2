@@ -38,42 +38,43 @@ html(lang="ru")
           block calendar
 
       aside.timetable__clock
-        .clock
-          ul.clock__scale.timetable__scale
-            li.clock__item-hour.timetable__hour
-              span 8  
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 9      
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 10
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 11
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 12
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 13
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 14
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 15
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 16
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 17
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 18
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 19
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 20
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 21
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 22
-            li.clock__item-hour.clock__item-hour--next.timetable__hour
-              span 23
-            li.clock__item-hour.clock__item-hour--current.timetable__current-hour(style="margin-left: calc(0.10416% * 35)")
-              span 8:05
+        block clock
+          .clock
+            ul.clock__scale.timetable__scale
+              li.clock__item-hour.timetable__hour
+                span 8  
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 9      
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 10
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 11
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 12
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 13
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 14
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 15
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 16
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 17
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 18
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 19
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 20
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 21
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 22
+              li.clock__item-hour.clock__item-hour--next.timetable__hour
+                span 23
+              li.clock__item-hour.clock__item-hour--current.timetable__current-hour(style="margin-left: calc(0.10416% * 35)")
+                span 8:05
       
       main.content.timetable__content
         block list
@@ -89,7 +90,7 @@ html(lang="ru")
                   p.room-elem__name Прачечная
                   p.room-elem__capacity до 10 человек
               li.list-floors__room 
-                .room-elem.room-elem--active 
+                .room-elem
                   p.room-elem__name Жёлтый дом
                   p.room-elem__capacity до 10 человек
               li.list-floors__room 
