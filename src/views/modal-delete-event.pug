@@ -3,8 +3,10 @@ block modal
   .modal-content
     .modal-content__window
       svg.modal-content__icon
-        use(width="45px" xlink:href="#emoji1")
-      h2.modal-content__allert Встреча будет удалена безвозвратно
+        use(xlink:href="#emoji1")
+        
+      h2.modal-content__alert Встреча будет удалена безвозвратно
       .modal-content__buttons
-        button.btn.btn--few-btn Отмена
-        button.btn.btn--few-btn Удалить
+        .buttons-group
+          button.btn.buttons-group__mr Отмена
+          button.btn Удалить
