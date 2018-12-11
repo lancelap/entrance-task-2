@@ -114,7 +114,7 @@ input:focus.input-field__input {
   left: 0;
   z-index: 1000;
 
-  max-height: 136px;
+  max-height: 102px;
 }
 
 @media #{$desktop-width} {
@@ -170,5 +170,9 @@ input:focus.input-field__input {
       width: 14px;
       height: 14px;
     }
+  }
+
+  .input-field__users-list {
+    max-height: 136px;
   }
 }
