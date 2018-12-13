@@ -17,19 +17,21 @@
         <div class="form-meeting__body"> 
           <div class="form-meeting__headline"> 
             <h1 class="form-meeting__h1">Новая встреча </h1>
-            <button class="btn btn--round form-meeting__close-btn form-meeting__desktop-visible" type="button"><span class="visually-hidden">Закрыть форму</span>
-              <svg class="btn__icon form-meeting__close-icon" viewbox="0 0 12.5 12.5">
-                <use xlink:href="#close"></use>
-              </svg>
-            </button>
+            <div class="form-meeting__desktop-visible">
+              <button class="btn btn--round form-meeting__close-btn" type="button"><span class="visually-hidden">Закрыть форму</span>
+                <svg class="icon btn__icon" width="14" height="14" viewbox="0 0 14 14">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
           </div>
           <fieldset class="form-meeting__section form-meeting__section--theme">
             <div class="input-field">
               <label class="input-field__label" for="theme">Тема</label>
               <div class="input-field__control">
                 <input class="input-field__input input-field__input--with-icon" placeholder="О чём будете говорить?" autocomplete="off" type="text" name="theme" id="theme">
-                <button class="btn btn--transparent input-field__field-btn" type="button"><span class="visually-hidden">Очистить поле</span>
-                  <svg class="btn__icon input-field__field-icon" viewbox="0 0 12.5 12.5">
+                <button class="btn btn--input input-field__field-btn input-field__field-btn--non-active" type="button"><span class="visually-hidden">Очистить поле</span>
+                  <svg class="icon btn__icon" width="14" height="14" viewbox="0 0 14 14">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
@@ -42,8 +44,8 @@
                 <label class="input-field__label" for="day-text">Дата <span class="input-field__text-time">и время</span></label>
                 <div class="input-field__control">
                   <input class="input-field__input input-field__input--with-icon" placeholder="14 декабря, 2017" autocomplete="off" type="text" name="date-text" id="day-text">
-                  <button class="btn btn--transparent input-field__field-btn" type="button"><span class="visually-hidden">Открыть календарь</span>
-                    <svg class="btn__icon input-field__field-icon input-field__field-icon--calendar" viewbox="0 0 14 14">
+                  <button class="btn btn--input input-field__field-btn" type="button"><span class="visually-hidden">Открыть календарь</span>
+                    <svg class="icon icon--big btn__icon" width="14" height="14" viewbox="0 0 14 14">
                       <use xlink:href="#calendar"></use>
                     </svg>
                   </button>
@@ -68,9 +70,9 @@
             <div class="input-field">
               <label class="input-field__label" for="members">Участники</label>
               <div class="input-field__control">
-                <input class="input-field__input" placeholder="Например, Тор Одинович" autocomplete="off" type="text" name="members" id="members">
-                <button class="btn btn--transparent input-field__field-btn" type="button"><span class="visually-hidden">Удалить участника</span>
-                  <svg class="btn__icon input-field__field-icon input-field__field-icon--arrow-up" viewbox="0 0 24 24">
+                <input class="input-field__input input-field__input--with-icon" placeholder="Например, Тор Одинович" autocomplete="off" type="text" name="members" id="members">
+                <button class="btn btn--input input-field__field-btn" type="button"><span class="visually-hidden">Удалить</span>
+                  <svg class="icon icon--big btn__icon btn__icon--arrow-up" width="14" height="14" viewbox="0 0 14 14">
                     <use xlink:href="#arrow"></use>
                   </svg>
                 </button>
@@ -92,8 +94,8 @@
               <li class="form-meeting__item">
                 <div class="peregovorka peregovorka--selected peregovorka__control"><span class="peregovorka__time">16:00—16:30</span>
                   <div class="peregovorka__place"><span class="peregovorka__name">Готем</span><span class="peregovorka__floor">4 этаж</span></div>
-                  <button class="btn btn--transparent peregovorka__field-btn" type="button"><span class="visually-hidden">Удалить</span>
-                    <svg class="btn__icon btn__icon--light peregovorka__field-icon" viewbox="0 0 12.5 12.5">
+                  <button class="btn btn--input peregovorka__field-btn" type="button"><span class="visually-hidden">Удалить</span>
+                    <svg class="icon btn__icon btn__icon--light" width="14" height="14" viewbox="0 0 14 14">
                       <use xlink:href="#close"></use>
                     </svg>
                   </button>

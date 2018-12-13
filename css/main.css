@@ -424,33 +424,48 @@ template {
   .btn--round {
     margin: 0;
     padding: 0;
+    line-height: 0;
     border-radius: 50%; }
-  .btn--transparent {
+  .btn--input {
+    margin: 0;
     padding: 0;
-    font-size: 0;
     line-height: 0;
     background-color: transparent; }
-    .btn--transparent:active {
+    .btn--input:active {
       background-color: transparent; }
+
+.btn__icon {
+  opacity: .4; }
+  .btn__icon--light {
+    opacity: 1;
+    fill: #fff; }
+  .btn__icon--arrow-up {
+    opacity: 1;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
 
 .btn:hover > .btn__icon {
   opacity: 1; }
 
-.btn__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 12px;
-  height: 12px;
-  opacity: .4;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
-  .btn__icon--light {
-    opacity: 1; }
+.btn:hover > .btn__icon--light {
+  fill: #000; }
 
 .btn__icon-bg--close {
   background-image: url("/img/icons/close.svg"); }
+
+.icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px; }
+  .icon--arrow {
+    width: 14px;
+    height: 14px; }
+  .icon--edit {
+    width: 10px;
+    height: 10px; }
+  .icon--big {
+    width: 12px;
+    height: 12px; }
 
 .body {
   font: normal 13px/15px "HelveticaNeue", Helvetica, Arial, sans-serif;
@@ -591,11 +606,6 @@ template {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.user-label__icon {
-  width: 14px;
-  height: 14px;
-  padding: 9px 12px 9px 8px; }
-
 .user-label__icon-btn {
   position: absolute;
   top: 50%;
@@ -605,10 +615,6 @@ template {
   margin-right: 2px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%); }
-
-.user-label__icon {
-  width: 12px;
-  height: 12px; }
 
 .peregovorka {
   padding-top: 14px;
@@ -653,16 +659,6 @@ template {
   height: 44px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%); }
-  .peregovorka__field-btn--non-active {
-    display: none; }
-
-.peregovorka__field-icon {
-  width: 12px;
-  height: 12px;
-  fill: #fff; }
-
-.peregovorka__field-btn:hover > .peregovorka__field-icon {
-  fill: #000; }
 
 .input-field {
   display: flex;
@@ -740,27 +736,13 @@ input:focus.input-field__input {
   .input-field__field-btn--non-active {
     display: none; }
 
-.input-field__field-icon {
-  width: 12px;
-  height: 12px; }
-  .input-field__field-icon--calendar {
-    width: 12px;
-    height: 12px; }
-  .input-field__field-icon--arrow-up {
-    width: 16px;
-    height: 16px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    -webkit-transform-origin: center top;
-            transform-origin: center top; }
-
 .input-field__users-list {
   position: absolute;
   top: 100%;
   right: 0;
   left: 0;
   z-index: 1000;
-  max-height: 136px; }
+  max-height: 102px; }
 
 .peregovorki-logo {
   display: flex;
@@ -942,21 +924,11 @@ input:focus.input-field__input {
   background: #ffffff; }
 
 .calendar__button {
-  position: relative;
-  width: 30px;
-  height: 30px; }
+  width: 32px;
+  height: 32px; }
   .calendar__button--next {
     -webkit-transform: scale(-1, 1);
             transform: scale(-1, 1); }
-
-.calendar__button-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 9px;
-  height: 14px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
 
 .calendar__data {
   width: 150px;
@@ -1001,24 +973,9 @@ input:focus.input-field__input {
   border-bottom: 8px solid #ffffff; }
 
 .tooltip__btn-edit {
-  position: relative;
   flex-shrink: 0;
   width: 24px;
   height: 24px; }
-
-.tooltip__edit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
-
-.tooltip__button-icon {
-  position: relative;
-  width: 10px;
-  height: 10px; }
 
 .tooltip__header {
   display: flex;
@@ -1232,21 +1189,11 @@ input:focus.input-field__input {
   box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28); }
 
 .date-picker__button {
-  position: relative;
   width: 30px;
   height: 30px; }
   .date-picker__button--next {
     -webkit-transform: scale(-1, 1);
             transform: scale(-1, 1); }
-
-.date-picker__button-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 9px;
-  height: 14px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
 
 .date-picker__picked-mounth {
   width: 200px;
@@ -1401,13 +1348,20 @@ input:focus.input-field__input {
         background-color: #0059FF; }
       .btn--primary:hover {
         background-color: #0B00FF; }
-    .btn--transparent {
+    .btn--input {
+      margin: 0;
       padding: 0;
       background-color: transparent; }
-      .btn--transparent:hover {
+      .btn--input:hover {
         background-color: transparent; }
-      .btn--transparent:active {
+      .btn--input:active {
         background-color: transparent; }
+  .icon {
+    width: 10px;
+    height: 10px; }
+    .icon--big {
+      width: 12px;
+      height: 12px; }
   .clock__item-hour {
     line-height: 45px; }
     .clock__item-hour--current {
@@ -1436,8 +1390,8 @@ input:focus.input-field__input {
                 transform-origin: 0 0;
         -webkit-transform: rotate(-45deg) translate(-50%, -50%);
                 transform: rotate(-45deg) translate(-50%, -50%);
-        -webkit-mask: url("/img/icons/close.svg") no-repeat;
-                mask: url("/img/icons/close.svg") no-repeat;
+        -webkit-mask: url("../img/icons/close.svg") no-repeat;
+                mask: url("../img/icons/close.svg") no-repeat;
         -webkit-mask-size: cover;
                 mask-size: cover; }
     .list-slot__slot--no-vacancy:hover, .list-slot__slot--no-vacancy:focus {
@@ -1483,9 +1437,6 @@ input:focus.input-field__input {
   .user-label__icon-btn {
     width: 24px;
     height: 24px; }
-  .user-label__icon {
-    width: 10px;
-    height: 10px; }
   .peregovorka {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1501,9 +1452,6 @@ input:focus.input-field__input {
   .peregovorka__field-btn {
     width: 38px;
     height: 38px; }
-  .peregovorka__field-icon {
-    width: 10px;
-    height: 10px; }
   .input-field__input {
     padding-top: 9px;
     padding-right: 10px;
@@ -1523,18 +1471,14 @@ input:focus.input-field__input {
   input:hover.input-field__input {
     border-color: #007DFF;
     outline: none; }
+  .input-field__control:hover .input-field__input {
+    border-color: #007DFF;
+    outline: none; }
   .input-field__field-btn {
     width: 38px;
     height: 38px; }
-  .input-field__field-icon {
-    width: 10px;
-    height: 10px; }
-    .input-field__field-icon--calendar {
-      width: 12px;
-      height: 12px; }
-    .input-field__field-icon--arrow-up {
-      width: 14px;
-      height: 14px; }
+  .input-field__users-list {
+    max-height: 136px; }
   .peregovorki-logo__link {
     margin-top: 25px;
     margin-bottom: 20px;
@@ -1574,7 +1518,6 @@ input:focus.input-field__input {
     flex: 1;
     padding: 0; }
   .form-meeting__close-btn {
-    display: block;
     width: 24px;
     height: 24px; }
   .form-meeting__close-icon {
@@ -1645,14 +1588,6 @@ input:focus.input-field__input {
   .calendar__button {
     width: 24px;
     height: 24px; }
-  .calendar__button-icon {
-    width: 7px;
-    height: 11px;
-    border-top: 6.5px solid transparent;
-    border-right: 8.5px solid transparent;
-    border-bottom: 6.5px solid transparent;
-    border-left: 8.5px solid transparent;
-    background-clip: padding-box; }
   .calendar__data {
     width: 124px;
     margin-right: 13px;
@@ -1730,15 +1665,7 @@ input:focus.input-field__input {
     margin-bottom: 0; }
   .date-picker__button {
     width: 24px;
-    height: 24px; }
-  .date-picker__button-icon {
-    width: 7px;
-    height: 11px;
-    border-top: 6.5px solid transparent;
-    border-right: 8.5px solid transparent;
-    border-bottom: 6.5px solid transparent;
-    border-left: 8.5px solid transparent;
-    background-clip: padding-box; } }
+    height: 24px; } }
 
 @media (max-width: 1279px) {
   .room-elem--compact {
