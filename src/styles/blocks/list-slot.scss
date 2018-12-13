@@ -64,7 +64,7 @@
         
         transform-origin: 0 0;
         transform: rotate(-45deg) translate(-50%, -50%);
-        mask: url('/img/icons/close.svg') no-repeat;
+        mask: url('../img/icons/close.svg') no-repeat;
         mask-size: cover;
       }
     }
