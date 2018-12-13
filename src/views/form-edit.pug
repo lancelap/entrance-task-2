@@ -10,9 +10,9 @@ block headline
 
 block inputTheme
   input.input-field__input.input-field__input--with-icon(placeholder="О чём будете говорить?" autocomplete="off" type="text" name="theme" id="theme")
-  button.btn.btn--transparent.input-field__field-btn(type="button")
-    span.visually-hidden Очичтить поле
-    svg.btn__icon.input-field__field-icon(viewbox="0 0 12.5 12.5")
+  button.btn.btn--input.input-field__field-btn(type="button")
+    span.visually-hidden Очистить поле
+    svg.icon.btn__icon(width="14" height="14" viewbox="0 0 14 14")
       use(xlink:href="#close")
 
 block members
@@ -20,25 +20,25 @@ block members
     li.form-meeting__item.form-meeting__item-members
       .user-label.control
         p.user-label__name Лекс Лютор
-        button.btn.btn--transparent.user-label__icon-btn(type="button")
+        button.btn.btn--input.user-label__icon-btn(type="button")
           span.visually-hidden Удалить участника
-          svg.btn__icon.user-label__icon(viewbox="0 0 12.5 12.5")
+          svg.icon.btn__icon(width="14" height="14" viewbox="0 0 14 14")
             use(xlink:href="#close")
         img.user-label__avatar(src="img/Chewbacca-icon.png" alt="Лекс Лютор")
     li.form-meeting__item.form-meeting__item-members
       .user-label
         p.user-label__name Томас Андерсон
-        button.btn.btn--transparent.user-label__icon-btn(type="button")
+        button.btn.btn--input.user-label__icon-btn(type="button")
           span.visually-hidden Удалить участника
-          svg.btn__icon.user-label__icon(viewbox="0 0 12.5 12.5")
+          svg.icon.btn__icon(width="14" height="14" viewbox="0 0 14 14")
             use(xlink:href="#close")
         img.user-label__avatar(src="img/Luke-Skywalker-icon.png" alt="Кларк Кент")
     li.form-meeting__item.form-meeting__item-members
       .user-label
         p.user-label__name Дарт Вейдер
-        button.btn.btn--transparent.user-label__icon-btn(type="button")
+        button.btn.btn--input.user-label__icon-btn(type="button")
           span.visually-hidden Удалить участника
-          svg.btn__icon.user-label__icon(viewbox="0 0 12.5 12.5")
+          svg.icon.btn__icon(width="14" height="14" viewbox="0 0 14 14")
             use(xlink:href="#close")
         img.user-label__avatar(src="img/Luke-Skywalker-icon.png" alt="Кларк Кент")
 
@@ -53,9 +53,9 @@ block rooms
           .peregovorka__place
             span.peregovorka__name Готем
             span.peregovorka__floor 4 этаж
-          button.btn.btn--transparent.peregovorka__field-btn(type="button")
+          button.btn.btn--input.peregovorka__field-btn(type="button")
             span.visually-hidden Удалить
-            svg.btn__icon.btn__icon--light.peregovorka__field-icon(viewbox="0 0 12.5 12.5")
+            svg.icon.btn__icon.btn__icon--light(width="14" height="14" viewbox="0 0 14 14")
               use(xlink:href="#close")
               
 block footer

@@ -1,8 +1,8 @@
 extends includes/form.pug
 block list-members
-  button.btn.btn--transparent.input-field__field-btn(type="button")
-    span.visually-hidden Удалить участника
-    svg.btn__icon.input-field__field-icon.input-field__field-icon--arrow-up(viewbox="0 0 24 24")
+  button.btn.btn--input.input-field__field-btn(type="button")
+    span.visually-hidden Удалить
+    svg.icon.icon--big.btn__icon.btn__icon--arrow-up(width="14" height="14" viewbox="0 0 14 14")
       use(xlink:href="#arrow")
 
   ul.list-users__list.input-field__users-list
@@ -59,8 +59,7 @@ block rooms
           .peregovorka__place
             span.peregovorka__name Готем
             span.peregovorka__floor 4 этаж
-          button.btn.btn--transparent.peregovorka__field-btn(type="button")
+          button.btn.btn--input.peregovorka__field-btn(type="button")
             span.visually-hidden Удалить
-            svg.btn__icon.btn__icon--light.peregovorka__field-icon(viewbox="0 0 12.5 12.5")
+            svg.icon.btn__icon.btn__icon--light(width="14" height="14" viewbox="0 0 14 14")
               use(xlink:href="#close")
-              

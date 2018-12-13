@@ -89,24 +89,6 @@ input:focus.input-field__input {
   }
 }
 
-.input-field__field-icon {
-  width: 12px;
-  height: 12px;
-
-  &--calendar {
-    width: 12px;
-    height: 12px;
-  }
-
-  &--arrow-up {
-    width: 16px;
-    height: 16px;
-
-    transform: rotate(90deg);
-    transform-origin: center top;
-  }
-}
-
 .input-field__users-list {
   position: absolute;
   top: 100%;
@@ -152,24 +134,14 @@ input:focus.input-field__input {
     outline: none;
   }
 
+  .input-field__control:hover .input-field__input {
+    border-color: #007DFF; 
+    outline: none;
+  }
+
   .input-field__field-btn {
     width: 38px;
     height: 38px;
-  }
-
-  .input-field__field-icon {
-    width: 10px;
-    height: 10px;
-
-    &--calendar {
-      width: 12px;
-      height: 12px;
-    }
-
-    &--arrow-up {
-      width: 14px;
-      height: 14px;
-    }
   }
 
   .input-field__users-list {

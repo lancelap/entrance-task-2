@@ -18,29 +18,9 @@
 }
 
 .tooltip__btn-edit {
-  position: relative;
-  
   flex-shrink: 0;
   width: 24px;
   height: 24px;
-}
-
-.tooltip__edit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 10px;
-  height: 10px;
-
-  transform: translate(-50%, -50%);
-}
-
-.tooltip__button-icon {
-  position: relative;
-
-  width: 10px;
-  height: 10px;
 }
 
 .tooltip__header {

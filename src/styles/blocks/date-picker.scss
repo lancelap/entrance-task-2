@@ -10,25 +10,12 @@
 }
 
 .date-picker__button {
-  position: relative;
-
   width: 30px;
   height: 30px;
 
   &--next {
     transform: scale(-1, 1);
   }
-}
-
-.date-picker__button-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 9px;
-  height: 14px;
-
-  transform: translate(-50%, -50%);
 }
 
 .date-picker__picked-mounth {
@@ -128,17 +115,5 @@
   .date-picker__button {
     width: 24px;
     height: 24px;
-  }
-
-  .date-picker__button-icon {
-    width: 7px;
-    height: 11px;
-    
-    border-top: 6.5px solid transparent; 
-    border-right: 8.5px solid transparent;  
-    border-bottom: 6.5px solid transparent;
-    border-left: 8.5px solid transparent;  
-    
-    background-clip: padding-box;
   }
 }
