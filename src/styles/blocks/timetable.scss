@@ -43,18 +43,6 @@
   margin-left: 181px;
 }
 
-// .timetable__current-hour {
-//   position: absolute;
-//   top: 0;
-//   z-index: 9000;
-
-//   margin-top: 7px;
-
-//   &::before {
-//     min-height: calc(100vh - 132px);
-//   }
-// }
-
 .timetable__content {
   min-height: calc(100vh - 138px);
 }
@@ -89,12 +77,4 @@
   .timetable__scale {
     margin-left: 246px;
   }
-
-  // .timetable__current-hour {
-  //   margin-top: 14px;
-
-  //   &::before {
-  //     min-height: calc(100vh - 106px);
-  //   }
-  // }
 }
