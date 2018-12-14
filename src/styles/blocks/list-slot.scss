@@ -9,6 +9,11 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  margin-bottom: 43px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .list-slot__room {
@@ -18,33 +23,53 @@
 }
 
 .list-slot__slot {
+  position: relative; 
+
   flex-grow: 1;
   flex-shrink: 0;
+  height: 58px;
   margin: 0;
+  margin-bottom: 2px;
   padding: 0;
-
+  
   color: #000000;
 
   background-color: #ffffff;
   border: none;
 
+  &:active {
+    z-index: 2000;
+  }
 
   &--no-vacancy {
     background-color: #d5dfe9;
   }
   
   &--no-vacancy-active {
+    z-index: 2000;
+
     background-color: #98a9b9;
   }
 
   &--active {
+    z-index: 2000;
+
     background-color: #005cff;
   }
 }
 
 @media #{$desktop-width} {
+  .list-slot__floor {
+    margin-bottom: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .list-slot__slot {
-    position: relative;
+    height: 28px;
+    margin-bottom: 24px;
 
     &:hover, &:focus {
       background-color: #1D54FE;
@@ -67,6 +92,10 @@
         mask: url('../img/icons/close.svg') no-repeat;
         mask-size: cover;
       }
+    }
+
+    &:hover {
+      z-index: 2000;
     }
 
     &--no-vacancy:hover, &--no-vacancy:focus {

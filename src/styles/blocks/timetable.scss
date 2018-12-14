@@ -37,29 +37,23 @@
   border-bottom: 1px solid #e9ecef;
 }
 
-.timetable__hour {
-  &::before {
-    min-height: calc(100vh - 137px);
-  }
-}
-
 .timetable__scale {
   position: relative;
 
   margin-left: 181px;
 }
 
-.timetable__current-hour {
-  position: absolute;
-  top: 0;
-  z-index: 9000;
+// .timetable__current-hour {
+//   position: absolute;
+//   top: 0;
+//   z-index: 9000;
 
-  margin-top: 7px;
+//   margin-top: 7px;
 
-  &::before {
-    min-height: calc(100vh - 132px);
-  }
-}
+//   &::before {
+//     min-height: calc(100vh - 132px);
+//   }
+// }
 
 .timetable__content {
   min-height: calc(100vh - 138px);
@@ -75,12 +69,6 @@
 
   .timetable__content {
     min-height: calc(100vh - 118px);
-  }
-
-  .timetable__hour {
-    &::before {
-      min-height: calc(100vh - 118px);
-    }
   }
 
   .timetable__calendar {
@@ -102,11 +90,11 @@
     margin-left: 246px;
   }
 
-  .timetable__current-hour {
-    margin-top: 14px;
+  // .timetable__current-hour {
+  //   margin-top: 14px;
 
-    &::before {
-      min-height: calc(100vh - 106px);
-    }
-  }
+  //   &::before {
+  //     min-height: calc(100vh - 106px);
+  //   }
+  // }
 }

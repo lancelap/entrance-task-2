@@ -39,22 +39,11 @@
     z-index: 100;
 
     width: 1px;
+    min-height: calc(100vh - 137px);
     
     background-color: #e9ecef;
     content: " ";
 
-    transform: translate(-50%, 0);
-  }
-
-  &--current {
-    display: inline-block;
-    width: 49px;
-
-    font: bold 11px/20px $font-stack;
-    color: #ffffff;
-
-    background-color: #007dff;
-    border-radius: 100px;
     transform: translate(-50%, 0);
   }
 
@@ -63,16 +52,46 @@
   }
 }
 
-.clock__item-hour--current::before {
+.clock__current-hour {
+  position: absolute;
+  top: 0;
+  z-index: 9000;
+
+  display: inline-block;
+  width: 49px;
+  margin-top: 7px;
+
+  font: bold 11px/20px $font-stack;
+  color: #ffffff;
+
   background-color: #007dff;
+  border-radius: 100px;
+  transform: translate(-50%, 0);
+
+  &::before {
+    min-height: calc(100vh - 132px);
+
+    background-color: #007dff;
+  }
 }
+
 
 @media #{$desktop-width} {
   .clock__item-hour {
     line-height: 45px;
 
-    &--current { 
-      line-height: 20px;
+    &::before {
+      min-height: calc(100vh - 118px);
+    }
+  }
+
+  .clock__current-hour {
+    margin-top: 14px;
+
+    line-height: 20px;
+  
+    &::before {
+      min-height: calc(100vh - 106px);
     }
   }
 
