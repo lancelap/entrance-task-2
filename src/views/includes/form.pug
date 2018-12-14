@@ -54,13 +54,13 @@ html(lang="ru")
                 .input-field__time
                   .input-field__interval
                     label.input-field__label.input-field__label--time(for="time-start") Начало
-                    input.input-field__input(placeholder="16:00" style="width: 100%;" autocomplete="off" type="text" name="time-start" id="time-start")
+                    input.input-field__input(placeholder="16:00" aria-label="Начало" autocomplete="off" type="text" name="time-start" id="time-start")
 
                   .input-field__hyphen
 
                   .input-field__interval
                     label.input-field__label.input-field__label--time(for="time-end") Конец
-                    input.input-field__input(placeholder="16:30" style="width: 100%;" autocomplete="off" type="text" name="time-end" id="time-end")
+                    input.input-field__input(placeholder="16:30" aria-label="Конец" autocomplete="off" type="text" name="time-end" id="time-end")
           
           fieldset.form-meeting__section
             .input-field
